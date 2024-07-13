@@ -1,9 +1,11 @@
+import js from "@eslint/js";
+import typescriptParser from "@typescript-eslint/parser";
 import astroEslintParser from "astro-eslint-parser";
 import eslintPluginAstro from "eslint-plugin-astro";
+import importPlugin from "eslint-plugin-import";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 import globals from "globals";
-import js from "@eslint/js";
 import tseslint from "typescript-eslint";
-import typescriptParser from "@typescript-eslint/parser";
 
 export default [
   js.configs.recommended,
@@ -28,20 +30,11 @@ export default [
     },
   },
   {
-    files: ["**/*.{js,jsx,astro}"],
-    rules: {
-      "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-    },
-  },
-  {
-    // Define the configuration for `<script>` tag.
-    // Script in `<script>` is assigned a virtual file name with the `.js` extension.
     files: ["**/*.{ts,tsx}", "**/*.astro/*.js"],
     languageOptions: {
       parser: typescriptParser,
     },
     rules: {
-      // Note: you must disable the base rule as it can report incorrect errors
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
@@ -51,6 +44,28 @@ export default [
         },
       ],
       "@typescript-eslint/no-non-null-assertion": "off",
+    },
+  },
+  {
+    files: ["**/*.{js,jsx,ts,tsx,astro}"],
+    plugins: {
+      import: importPlugin,
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "import/order": [
+        "error",
+        {
+          groups: [
+            ["builtin", "external"],
+            ["internal", "parent", "sibling", "index"],
+          ],
+          "newlines-between": "always",
+          alphabetize: { order: "asc", caseInsensitive: true },
+        },
+      ],
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
     },
   },
   {
