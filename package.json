@@ -1,22 +1,19 @@
 {
   "name": "astro-blog",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "format": "prettier -w .",
-    "lint": "eslint ."
+    "build": "astro check && astro build",
+    "format": "prettier -w . && eslint --fix ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.1",
-    "astro": "^4.11.5",
-    "typescript": "^5.5.3"
+    "astro": "^4.11.5"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.8.1",
     "@astrojs/tailwind": "^5.1.0",
     "@eslint/js": "^9.7.0",
     "@types/eslint__js": "^8.42.3",

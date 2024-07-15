@@ -9,8 +9,8 @@ import tseslint from "typescript-eslint";
 
 export default [
   js.configs.recommended,
-  ...eslintPluginAstro.configs["flat/recommended"],
   ...tseslint.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
   {
     languageOptions: {
       globals: {
