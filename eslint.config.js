@@ -69,6 +69,12 @@ export default [
     },
   },
   {
-    ignores: ["dist", "node_modules", ".github", "types.generated.d.ts", ".astro"],
+    ignores: [
+      ".astro",
+      ".github",
+      "dist",
+      "node_modules",
+      "types.generated.d.ts",
+    ],
   },
 ];
