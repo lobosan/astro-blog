@@ -1,16 +1,509 @@
 ---
-
+import "@/assets/styles/globals.css";
+import "@fontsource-variable/inter";
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://demo.viafoura.com/" />
+    <meta name="vf:domain" content="demo.viafoura.com" />
+    <link rel="shortcut icon" href="/src/assets/images/favicon.ico" type="image/x-icon" />
+    <title>Viafoura Demo</title>
+    <meta property="og:title" content="Viafoura Demo" />
+    <meta name="twitter:title" content="Viafoura Demo" />
+    <meta name="description" content="Viafoura Demo Site with Next.js and DatoCMS" />
+    <meta property="og:description" content="Viafoura Demo Site with Next.js and DatoCMS" />
+    <meta name="twitter:description" content="Viafoura Demo Site with Next.js and DatoCMS" />
+    <meta
+      property="og:image"
+      content="https://www.datocms-assets.com/55856/1640274387-viafoura-demo.png?auto=format&fit=max&w=1200"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="733" />
+    <meta property="og:image:alt" content="Viafoura Demo" />
+    <meta
+      name="twitter:image"
+      content="https://www.datocms-assets.com/55856/1640274387-viafoura-demo.png?auto=format&fit=max&w=1200"
+    />
+    <meta name="twitter:image:alt" content="Viafoura Demo" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Viafoura Demo" />
+    <meta property="article:modified_time" content="2022-02-14T17:15:57Z" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="robots" content="noindex" />
+    <link
+      sizes="16x16"
+      type="image/ico"
+      rel="icon"
+      href="https://www.datocms-assets.com/55856/1644869412-favicon.ico?auto=format&h=16&w=16"
+    />
+    <link
+      sizes="32x32"
+      type="image/ico"
+      rel="icon"
+      href="https://www.datocms-assets.com/55856/1644869412-favicon.ico?auto=format&h=32&w=32"
+    />
+    <link
+      sizes="96x96"
+      type="image/ico"
+      rel="icon"
+      href="https://www.datocms-assets.com/55856/1644869412-favicon.ico?auto=format&h=96&w=96"
+    />
+    <link
+      sizes="192x192"
+      type="image/ico"
+      rel="icon"
+      href="https://www.datocms-assets.com/55856/1644869412-favicon.ico?auto=format&h=192&w=192"
+    />
+    <script src="/scripts/darkMode.js" is:inline></script>
   </head>
   <body>
-    <h1 class="text-6xl p-10">Astro Blog</h1>
+    <div id="__next">
+      <div class="__variable_aaf875 font-sans">
+        <nav class="sticky top-0 z-10 h-16 max-w-full bg-neutral-800 px-4 py-3 dark:bg-[#090909]">
+          <div class="mx-auto flex max-w-6xl items-center">
+            <div class="h-10 w-10">
+              <div class="flex">
+                <button class="flex items-center" title="Open Menu">
+                  <img class="h-8 w-8" src="/src/assets/images/sales-menu.svg" alt="Sales Menu" />
+                </button>
+              </div>
+            </div>
+            <div class="mx-auto h-[30px] w-[150px]">
+              <a href="/" title="Viafoura"><img src="/src/assets/images/white-logo.svg" alt="Viafoura" /></a>
+            </div>
+            <div class="h-10 w-10 rounded-full bg-neutral-700 hover:bg-neutral-600">
+              <div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+            </div>
+          </div>
+        </nav>
+        <div
+          class="-ml-5 flex h-14 items-center justify-center border-b-[1px] border-gray-200 bg-gray-100 text-sm uppercase text-gray-500 dark:border-neutral-700 dark:bg-[#1A1A1A]"
+        >
+          <a href="/topics/media" class="ml-5 font-semibold text-gray-600 hover:underline dark:text-white">Media</a><a
+            href="/topics/news"
+            class="ml-5 font-semibold text-gray-600 hover:underline dark:text-white">News</a
+          ><a href="/topics/politics" class="ml-5 font-semibold text-gray-600 hover:underline dark:text-white"
+            >Politics</a
+          ><a href="/topics/sports" class="ml-5 font-semibold text-gray-600 hover:underline dark:text-white">Sports</a
+          ><a href="/topics/travel" class="ml-5 font-semibold text-gray-600 hover:underline dark:text-white">Travel</a>
+        </div>
+        <main class="min-h-[calc(100vh-310px)]">
+          <div class="container mx-auto mt-7 max-w-6xl px-5">
+            <section class="pb-11">
+              <div class="my-8">
+                <div>
+                  <a href="/posts/korean-fusion-delight-homemade-bulgogi-tacos-recipe"
+                    ><div class="mb-5 shadow-lg">
+                      <img class="h-[556px] w-full object-cover" src="src/assets/images/tacos.webp" alt="" />
+                    </div></a
+                  >
+                </div>
+              </div>
+              <div class="grid gap-x-6 sm:grid-cols-2">
+                <h1>
+                  <a href="/posts/korean-fusion-delight-homemade-bulgogi-tacos-recipe" class="hover:underline"
+                    >Korean Fusion Delight - Homemade Bulgogi Tacos Recipe</a
+                  >
+                </h1>
+                <div>
+                  <p class="mb-4 mt-4 text-base text-gray-700 antialiased sm:mt-0">
+                    Bulgogi, the savory and sweet Korean marinated beef, takes on a new and delicious form in this
+                    recipe as it meets the vibrant world of tacos.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">Jocelyn Russell</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="pb-6">
+              <div class="mb-6 flex items-center"><h2>More Stories</h2></div>
+              <div class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
+                <div>
+                  <div>
+                    <a href="/posts/viafoura-fc-live-qa"
+                      ><div class="mb-5 shadow-lg">
+                        <img class="h-[262px] w-full object-cover" src="src/assets/images/live-chat-qa.webp" alt="" />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/viafoura-fc-live-qa" class="hover:underline">Viafoura FC: Live Q&amp;A</a>
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    Viafoura FC manager Mick Lozar is online and taking questions from fans about the team and their
+                    trials and tribulations throughout the season. Join now!
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">Norman Phillips</div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/golden-globes-2024"
+                      ><div class="mb-5 shadow-lg">
+                        <img class="h-[262px] w-full object-cover" src="src/assets/images/golden-globes.webp" alt="" />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/golden-globes-2024" class="hover:underline">Golden Globes 2024</a>
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    Follow our live coverage for awards for film and American television productions of 2023.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">Tom Hardington</div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/vf-rams-gameday-follow-the-action-live"
+                      ><div class="mb-5 shadow-lg">
+                        <img class="h-[262px] w-full object-cover" src="src/assets/images/vf-gameday.webp" alt="" />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/vf-rams-gameday-follow-the-action-live" class="hover:underline"
+                      >VF Rams vs OW Officers Gameday: Follow the Action Live!</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    Another VF Tigers Gameday is upon us and we're all hoping the Tigers can keep their miracle season
+                    going with another win against the 8-6 OW Officers. Follow Live NOW!
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">Tom Hardington</div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/ask-me-anything-viafouras-travel-correspondent-answers-your-questions-live"
+                      ><div class="mb-5 shadow-lg">
+                        <img class="h-[262px] w-full object-cover" src="src/assets/images/vf-travel-ama.webp" alt="" />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a
+                      href="/posts/ask-me-anything-viafouras-travel-correspondent-answers-your-questions-live"
+                      class="hover:underline"
+                      >Ask me Anything: Viafoura's Travel Correspondent answers your questions live</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Join
+                    the conversation now!
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">
+                      Lindsay Singleton<a
+                        class="mr-3 flex hover:underline"
+                        href="/posts/ask-me-anything-viafouras-travel-correspondent-answers-your-questions-live#vf-conversations-container"
+                        title="Join the Conversation"
+                        ><svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="mx-1 mt-[3px] h-5 w-5"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+                          <path
+                            d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
+                          ></path>
+                        </svg>
+                        <div class="viafoura">
+                          <vf-conversations-count vf-container-id="100014"></vf-conversations-count>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/here-are-what-media-companies-are-doing-with-covid-19-overload"
+                      ><div class="mb-5 shadow-lg">
+                        <img
+                          class="h-[262px] w-full object-cover"
+                          src="src/assets/images/information-overload.webp"
+                          alt=""
+                        />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a
+                      href="/posts/here-are-what-media-companies-are-doing-with-covid-19-overload"
+                      class="hover:underline"
+                      >Here Are What Media Companies Are Doing to Deal With COVID-19 Information Overload</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    With COVID-19 disrupting the world, the demand for news has never been greater. Newsrooms are being
+                    pushed to their limits as they test the most time-saving yet effective methods to sift through an
+                    infinite amount of coronavirus information, craft story after story and keep their teams safe.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">
+                      Norman Phillips<a
+                        class="mr-3 flex hover:underline"
+                        href="/posts/here-are-what-media-companies-are-doing-with-covid-19-overload#vf-conversations-container"
+                        title="Join the Conversation"
+                        ><svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="mx-1 mt-[3px] h-5 w-5"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+                          <path
+                            d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
+                          ></path>
+                        </svg>
+                        <div class="viafoura">
+                          <vf-conversations-count vf-container-id="200014"></vf-conversations-count>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/brexit-to-cost-gbp1-200-for-each-person-in-uk"
+                      ><div class="mb-5 shadow-lg">
+                        <img
+                          class="h-[262px] w-full object-cover"
+                          src="src/assets/images/brexit-to-cost-the-uk.webp"
+                          alt=""
+                        />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/brexit-to-cost-gbp1-200-for-each-person-in-uk" class="hover:underline"
+                      >Brexit to cost £1,200 for each person in UK</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    Boris Johnson's Brexit will hinder monetary development to the tune of £1,200 for each individual in
+                    the nation, the administration's spending guard dog has said.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">
+                      Tom Hardington<a
+                        class="mr-3 flex hover:underline"
+                        href="/posts/brexit-to-cost-gbp1-200-for-each-person-in-uk#vf-conversations-container"
+                        title="Join the Conversation"
+                        ><svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="mx-1 mt-[3px] h-5 w-5"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+                          <path
+                            d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
+                          ></path>
+                        </svg>
+                        <div class="viafoura">
+                          <vf-conversations-count vf-container-id="300014"></vf-conversations-count>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/dont-shut-out-your-community-guide-them-to-civility"
+                      ><div class="mb-5 shadow-lg">
+                        <img class="h-[262px] w-full object-cover" src="src/assets/images/new-heights.webp" alt="" />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/dont-shut-out-your-community-guide-them-to-civility" class="hover:underline"
+                      >Don't shut out your community, instead guide them towards civility</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    It's a common online mantra that is gaining traction. In fact, over the past year, several major
+                    Canadian publications such as the Toronto Star, Sun Media and The National Post have taken this
+                    phrase to heart, and made it so you can't read comments.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">
+                      Tom Hardington<a
+                        class="mr-3 flex hover:underline"
+                        href="/posts/dont-shut-out-your-community-guide-them-to-civility#vf-conversations-container"
+                        title="Join the Conversation"
+                        ><svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="mx-1 mt-[3px] h-5 w-5"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+                          <path
+                            d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
+                          ></path>
+                        </svg>
+                        <div class="viafoura">
+                          <vf-conversations-count vf-container-id="400014"></vf-conversations-count>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/so-you-got-new-engagement-tools-now-what"
+                      ><div class="mb-5 shadow-lg">
+                        <img
+                          class="h-[262px] w-full object-cover"
+                          src="src/assets/images/impact-engagement.webp"
+                          alt=""
+                        />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/so-you-got-new-engagement-tools-now-what" class="hover:underline"
+                      >So you got New Engagement Tools, Now What?</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    With the decline of trust in social media advertising, media organizations are exploring new
+                    technologies, specifically on-site engagement tools that build audiences on their own platforms.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">
+                      Norman Phillips<a
+                        class="mr-3 flex hover:underline"
+                        href="/posts/so-you-got-new-engagement-tools-now-what#vf-conversations-container"
+                        title="Join the Conversation"
+                        ><svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="mx-1 mt-[3px] h-5 w-5"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+                          <path
+                            d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
+                          ></path>
+                        </svg>
+                        <div class="viafoura">
+                          <vf-conversations-count vf-container-id="500028"></vf-conversations-count>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <a href="/posts/the-microbrewery-scene-in-toronto-is-exploding"
+                      ><div class="mb-5 shadow-lg">
+                        <img
+                          class="h-[262px] w-full object-cover"
+                          src="src/assets/images/torontos-top-eats.webp"
+                          alt=""
+                        />
+                      </div></a
+                    >
+                  </div>
+                  <h3 class="mb-3">
+                    <a href="/posts/the-microbrewery-scene-in-toronto-is-exploding" class="hover:underline"
+                      >The Microbrewery Scene in Toronto is Exploding</a
+                    >
+                  </h3>
+                  <p class="mb-4 text-base text-gray-700 antialiased">
+                    Microbreweries have been popping up all over Toronto and people can't get enough. They offer a
+                    wonderful atmosphere as well as refreshing beer and great eats.
+                  </p>
+                  <div class="w-50">
+                    <div class="flex text-base font-semibold text-gray-800">
+                      Lindsay Singleton<a
+                        class="mr-3 flex hover:underline"
+                        href="/posts/the-microbrewery-scene-in-toronto-is-exploding#vf-conversations-container"
+                        title="Join the Conversation"
+                        ><svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 24 24"
+                          class="mx-1 mt-[3px] h-5 w-5"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
+                          <path
+                            d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
+                          ></path>
+                        </svg>
+                        <div class="viafoura">
+                          <vf-conversations-count vf-container-id="600030"></vf-conversations-count>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer
+          class="mt-14 border-t border-gray-300 bg-gray-50 py-7 text-center text-sm text-gray-400 dark:border-neutral-700 dark:bg-[#1A1A1A]"
+        >
+          <div>Viafoura - Copyright © 2024</div>
+          <div>
+            <a class="privacy-policy" href="https://viafoura.com/privacy-policy" target="_blank">Privacy Policy</a>
+          </div>
+          <svg
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="mt-1 h-6 w-6 cursor-pointer"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Enable Dark Theme</title>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </footer>
+      </div>
+    </div>
+    <script async src="//cdn.viafoura.net/entry/index.js" is:inline></script>
   </body>
 </html>
