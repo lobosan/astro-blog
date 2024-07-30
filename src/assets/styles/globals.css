@@ -31,9 +31,9 @@
 }
 
 /* HTML */
-nav .viafoura,
-nav .viafoura .vf-tray-trigger:hover,
-nav .viafoura .vf-tray-trigger:focus {
+header .viafoura,
+header .viafoura .vf-tray-trigger:hover,
+header .viafoura .vf-tray-trigger:focus {
   color: white !important;
   background-color: transparent;
 }
