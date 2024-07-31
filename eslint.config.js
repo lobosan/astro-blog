@@ -36,6 +36,8 @@ export default [
     },
     rules: {
       "no-unused-vars": "off",
+      "@typescript-eslint/triple-slash-reference": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
@@ -43,7 +45,6 @@ export default [
           destructuredArrayIgnorePattern: "^_",
         },
       ],
-      "@typescript-eslint/no-non-null-assertion": "off",
     },
   },
   {
