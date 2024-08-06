@@ -1,30 +1,26 @@
 ---
-import type { Post } from "@/components/PropTypes";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  postList: Post[] | [];
+  postList: CollectionEntry<"blog">[] | [];
 }
 
 const { postList } = Astro.props;
 ---
 
-<section class="pb-6">
-  <div class="mb-6 flex items-center"><h2>More Stories</h2></div>
+<section class="pb-6 pt-11">
+  <h2 class="mb-6 flex items-center">More Stories</h2>
   <div class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
     {
       postList.map((post) => (
         <article>
-          <div>
-            <a href={`/posts/${post.slug}`}>
-              <div class="mb-5 shadow-lg">
-                <img
-                  class="aspect-video w-full object-cover"
-                  src={`src/assets/images/${post.data.image}.webp`}
-                  alt={post.data.image}
-                />
-              </div>
-            </a>
-          </div>
+          <a href={`/posts/${post.slug}`}>
+            <img
+              class="mb-5 aspect-video w-full object-cover shadow-xl"
+              src={`src/assets/images/${post.data.image}.webp`}
+              alt={post.data.image}
+            />
+          </a>
           <h3 class="mb-3">
             <a href={`/posts/${post.slug}`} class="hover:underline">
               {post.data.title}
