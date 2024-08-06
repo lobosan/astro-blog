@@ -1,6 +1,5 @@
 ---
 vfContainerId: 101113521
-slug: "golden-globes-2024"
 title: "Golden Globes 2024"
 image: "golden-globes"
 author: "Tom Hardington"

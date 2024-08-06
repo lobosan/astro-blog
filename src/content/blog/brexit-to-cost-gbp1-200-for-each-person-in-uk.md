@@ -1,6 +1,5 @@
 ---
 vfContainerId: 300014
-slug: "brexit-to-cost-gbp1-200-for-each-person-in-uk"
 title: "Brexit to cost £1,200 for each person in UK"
 image: "brexit-cost-in-uk"
 author: "Tom Hardington"

@@ -1,6 +1,5 @@
 ---
 vfContainerId: 101113526
-slug: "viafoura-fc-live-qa"
 title: "Viafoura FC: Live Q&A"
 image: "viafoura-fc-live-qa"
 author: "Norman Phillips"

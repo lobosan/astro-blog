@@ -1,6 +1,5 @@
 ---
 vfContainerId: 400014
-slug: "dont-shut-out-your-community-guide-them-to-civility"
 title: "Don't shut out your community, instead guide them towards civility"
 image: "dont-shut-out-your-community"
 author: "Tom Hardington"

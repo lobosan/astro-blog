@@ -1,6 +1,5 @@
 ---
 vfContainerId: 101113523
-slug: "vf-rams-gameday-follow-the-action-live"
 title: "VF Rams vs OW Officers Gameday: Follow the Action Live!"
 image: "vf-rams-vs-ow-officers"
 author: "Tom Hardington"

@@ -1,6 +1,5 @@
 ---
 vfContainerId: 200014
-slug: "here-are-what-media-companies-are-doing-with-covid-19-overload"
 title: "Here Are What Media Companies Are Doing to Deal With COVID-19 Information Overload"
 image: "information-overload"
 author: "Norman Phillips"

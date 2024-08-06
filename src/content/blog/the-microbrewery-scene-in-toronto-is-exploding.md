@@ -1,6 +1,5 @@
 ---
 vfContainerId: 600030
-slug: "the-microbrewery-scene-in-toronto-is-exploding"
 title: "The Microbrewery Scene in Toronto is Exploding"
 image: "the-microbrewery-scene-in-toronto"
 author: "Lindsay Singleton"

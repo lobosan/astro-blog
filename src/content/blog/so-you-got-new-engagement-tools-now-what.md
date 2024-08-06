@@ -1,8 +1,7 @@
 ---
 vfContainerId: 500028
-slug: "so-you-got-new-engagement-tools-now-what"
 title: "So you got New Engagement Tools, Now What?"
-image: "dont-shut-out-your-community"
+image: "so-you-got-new-engagement-tools"
 author: "Norman Phillips"
 topics: ["Media", "News"]
 excerpt: "With the decline of trust in social media advertising, media organizations are exploring new technologies, specifically on-site engagement tools that build audiences on their own platforms."
