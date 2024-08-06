@@ -13,11 +13,7 @@ import TopicsNav from "@/components/TopicsNav.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:url" content="https://demo.viafoura.com/" />
     <meta name="vf:domain" content="demo.viafoura.com" />
-    <link
-      rel="shortcut icon"
-      href="src/assets/images/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="src/assets/images/favicon.ico" type="image/x-icon" />
     <title>Viafoura Demo</title>
     <meta
       name="description"
@@ -41,7 +37,7 @@ import TopicsNav from "@/components/TopicsNav.astro";
   <body>
     <Header />
     <TopicsNav />
-    <main class="min-h-[calc(100vh-310px)]">
+    <main class="container mx-auto mt-7 min-h-[calc(100vh-310px)] max-w-6xl px-5">
       <slot />
     </main>
     <Footer />

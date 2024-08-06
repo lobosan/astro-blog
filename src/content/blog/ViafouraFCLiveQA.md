@@ -2,10 +2,10 @@
 vfContainerId: 101113526
 slug: "viafoura-fc-live-qa"
 title: "Viafoura FC: Live Q&A"
-image: "korean-fusion-delight"
+image: "viafoura-fc-live-qa"
 author: "Norman Phillips"
 topics: ["Sports"]
-excertp: "Viafoura FC manager Mick Lozar is online and taking questions from fans about the team and their trials and tribulations throughout the season. Join now!"
+excerpt: "Viafoura FC manager Mick Lozar is online and taking questions from fans about the team and their trials and tribulations throughout the season. Join now!"
 pubDate: "Feb 28 2022"
 productDemo: "Live Chat - Sports Q&A"
 showLiveChat: false

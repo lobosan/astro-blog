@@ -5,7 +5,7 @@ title: "Don't shut out your community, instead guide them towards civility"
 image: "dont-shut-out-your-community"
 author: "Tom Hardington"
 topics: ["Politics", "News"]
-excertp: "It’s a common online mantra that is gaining traction. In fact, over the past year, several major Canadian publications such as the Toronto Star, Sun Media and The National Post have taken this phrase to heart, and made it so you can’t read comments."
+excerpt: "It’s a common online mantra that is gaining traction. In fact, over the past year, several major Canadian publications such as the Toronto Star, Sun Media and The National Post have taken this phrase to heart, and made it so you can’t read comments."
 pubDate: "Dec 15 2023"
 showLiveChat: false
 ---

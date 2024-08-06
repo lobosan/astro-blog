@@ -1,11 +1,11 @@
 ---
 vfContainerId: 300014
-slug: "here-are-what-media-companies-are-doing-with-covid-19-overload"
+slug: "brexit-to-cost-gbp1-200-for-each-person-in-uk"
 title: "Brexit to cost £1,200 for each person in UK"
 image: "brexit-cost-in-uk"
 author: "Tom Hardington"
 topics: ["Politics", "News"]
-excertp: "Boris Johnson’s Brexit will hinder monetary development to the tune of £1,200 for each individual in the nation, the administration’s spending guard dog has said."
+excerpt: "Boris Johnson’s Brexit will hinder monetary development to the tune of £1,200 for each individual in the nation, the administration’s spending guard dog has said."
 pubDate: "Mar 06 2022"
 showLiveChat: false
 ---

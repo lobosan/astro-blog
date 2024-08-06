@@ -1,0 +1,36 @@
+---
+import type { Post } from "@/content/types";
+
+interface Props {
+  postHero: Post | undefined;
+}
+
+const { postHero } = Astro.props;
+---
+
+<article class="pb-11">
+  <div class="my-8">
+    <a href={`posts/${postHero?.slug}`}
+      ><div class="mb-5 shadow-lg">
+        <img
+          class="aspect-video w-full object-cover"
+          src=`src/assets/images/${postHero?.data.image}.webp`
+          alt=""
+        />
+      </div></a
+    >
+  </div>
+  <div class="grid gap-x-6 sm:grid-cols-2">
+    <h1>
+      <a href={`post/${postHero?.slug}`} class="hover:underline">{postHero?.data.title}</a>
+    </h1>
+    <div>
+      <p class="mb-4 mt-4 text-base text-gray-700 antialiased sm:mt-0">
+        {postHero?.data.excerpt}
+      </p>
+      <div class="w-50 flex text-base font-semibold text-gray-800">
+        {postHero?.data.author}
+      </div>
+    </div>
+  </div>
+</article>

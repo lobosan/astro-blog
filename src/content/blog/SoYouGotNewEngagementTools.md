@@ -5,7 +5,7 @@ title: "So you got New Engagement Tools, Now What?"
 image: "dont-shut-out-your-community"
 author: "Norman Phillips"
 topics: ["Media", "News"]
-excertp: "With the decline of trust in social media advertising, media organizations are exploring new technologies, specifically on-site engagement tools that build audiences on their own platforms."
+excerpt: "With the decline of trust in social media advertising, media organizations are exploring new technologies, specifically on-site engagement tools that build audiences on their own platforms."
 pubDate: "May 29 2024"
 showLiveChat: false
 ---

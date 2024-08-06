@@ -5,7 +5,7 @@ title: "The Microbrewery Scene in Toronto is Exploding"
 image: "the-microbrewery-scene-in-toronto"
 author: "Lindsay Singleton"
 topics: ["Travel"]
-excertp: "Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats."
+excerpt: "Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats."
 pubDate: "Aug 01 2022"
 showLiveChat: false
 ---

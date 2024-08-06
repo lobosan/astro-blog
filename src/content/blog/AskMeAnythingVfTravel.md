@@ -5,7 +5,7 @@ title: "Ask me Anything: Viafoura's Travel Correspondent answers your questions 
 image: "ask-me-anything-vf-travel"
 author: "Lindsay Singleton"
 topics: ["Travel"]
-excertp: "Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Join the conversation now!"
+excerpt: "Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Join the conversation now!"
 pubDate: "Apr 09 2023"
 productDemo: "Conversations - Ask Me Anything"
 showLiveChat: false

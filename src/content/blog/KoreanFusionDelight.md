@@ -5,7 +5,7 @@ title: "Korean Fusion Delight - Homemade Bulgogi Tacos Recipe"
 image: "korean-fusion-delight"
 author: "Jocelyn Russell"
 topics: ["Travel"]
-excertp: "Bulgogi, the savory and sweet Korean marinated beef, takes on a new and delicious form in this recipe as it meets the vibrant world of tacos."
+excerpt: "Bulgogi, the savory and sweet Korean marinated beef, takes on a new and delicious form in this recipe as it meets the vibrant world of tacos."
 pubDate: "Jun 01 2024"
 productDemo: "Ratings & Reviews"
 showLiveChat: false

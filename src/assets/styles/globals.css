@@ -187,11 +187,7 @@ header .viafoura .vf-tray-trigger:focus {
   color: #fff !important;
 }
 /* Temporal fixes */
-.dark
-  .viafoura
-  .vf-editors-pick_container-right
-  .vf-post
-  .vf-post-name-button__username {
+.dark .viafoura .vf-editors-pick_container-right .vf-post .vf-post-name-button__username {
   color: #fff !important;
 }
 .dark .viafoura .vf-feedback-survey__label {

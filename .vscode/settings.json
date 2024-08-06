@@ -7,13 +7,7 @@
     "source.sortImports": "always"
   },
   "eslint.useFlatConfig": true,
-  "eslint.validate": [
-    "astro",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["astro", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "files.associations": {
     "*.mdx": "markdown"
   },

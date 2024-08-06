@@ -1,0 +1,41 @@
+---
+import type { Post } from "@/content/types";
+
+interface Props {
+  postList: Post[] | [];
+}
+
+const { postList } = Astro.props;
+---
+
+<section class="pb-6">
+  <div class="mb-6 flex items-center"><h2>More Stories</h2></div>
+  <div class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
+    {
+      postList.map((post) => (
+        <article>
+          <div>
+            <a href={`/posts/${post.slug}`}>
+              <div class="mb-5 shadow-lg">
+                <img
+                  class="aspect-video w-full object-cover"
+                  src={`src/assets/images/${post.data.image}.webp`}
+                  alt={post.data.image}
+                />
+              </div>
+            </a>
+          </div>
+          <h3 class="mb-3">
+            <a href={`/posts/${post.slug}`} class="hover:underline">
+              {post.data.title}
+            </a>
+          </h3>
+          <p class="mb-4 text-base text-gray-700 antialiased">{post.data.excerpt}</p>
+          <div class="w-50">
+            <div class="flex text-base font-semibold text-gray-800">{post.data.author}</div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
