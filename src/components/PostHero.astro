@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { postHero } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*");
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/images/*");
 ---
 
 {

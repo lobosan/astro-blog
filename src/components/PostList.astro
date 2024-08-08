@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { postList } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*");
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/images/*");
 ---
 
 <section class="pb-6 pt-11">
