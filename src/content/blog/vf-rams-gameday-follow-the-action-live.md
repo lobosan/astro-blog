@@ -1,7 +1,7 @@
 ---
 vfContainerId: 101113523
 title: "VF Rams vs OW Officers Gameday: Follow the Action Live!"
-image: "vf-rams-vs-ow-officers"
+image: "/src/assets/images/vf-rams-vs-ow-officers.webp"
 author: "Tom Hardington"
 topics: ["Sports"]
 excerpt: "Another VF Tigers Gameday is upon us and we're all hoping the Tigers can keep their miracle season going with another win against the 8-6 OW Officers. Follow Live NOW!"

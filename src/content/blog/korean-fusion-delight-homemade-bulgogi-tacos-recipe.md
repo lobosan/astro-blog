@@ -1,7 +1,7 @@
 ---
 vfContainerId: 700000
 title: "Korean Fusion Delight - Homemade Bulgogi Tacos Recipe"
-image: "korean-fusion-delight"
+image: "/src/assets/images/korean-fusion-delight.webp"
 author: "Jocelyn Russell"
 topics: ["Travel"]
 excerpt: "Bulgogi, the savory and sweet Korean marinated beef, takes on a new and delicious form in this recipe as it meets the vibrant world of tacos."
