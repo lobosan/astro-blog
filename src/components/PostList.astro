@@ -21,11 +21,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/images/*");
             <Image
               class="mb-5 aspect-video w-full object-cover shadow-xl"
               src={images[post.data.image]()}
-              alt=""
+              alt={post.data.title}
               loading={"lazy"}
               format="avif"
-              width={524}
-              height={295}
               widths={[335, 600]}
               sizes={"(max-width: 360px) 335px, 600px"}
             />

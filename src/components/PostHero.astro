@@ -18,15 +18,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/images/*");
         <Image
           class="mb-6 mt-8 aspect-video w-full object-cover shadow-xl"
           src={images[postHero.data.image]()}
-          alt=""
+          alt={postHero.data.title}
           loading={"eager"}
           format="avif"
-          width={1112}
-          height={626}
-          widths={[240, 540, 720, 1024]}
-          sizes={
-            "(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, 1024px"
-          }
+          widths={[335, 600, 1112]}
+          sizes={"(max-width: 360px) 335px, (max-width: 720px) 600px, 1112px"}
         />
       </a>
       <div class="grid gap-x-6 sm:grid-cols-2">
