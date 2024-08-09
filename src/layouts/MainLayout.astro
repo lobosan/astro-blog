@@ -5,33 +5,36 @@ import "@fontsource-variable/inter";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import TopicsNav from "@/components/TopicsNav.astro";
+
+interface Props {
+  title: string;
+  vfContainerId?: string;
+}
+
+const { title, vfContainerId } = Astro.props;
+const site = {
+  name: "Viafoura Demo",
+  description: "Viafoura Demo Site to showcase best practices for all of our community tools",
+};
 ---
 
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:url" content="https://demo.viafoura.com/" />
-    <meta name="vf:domain" content="demo.viafoura.com" />
-    <link rel="shortcut icon" href="/src/images/favicon.ico" type="image/x-icon" />
-    <title>Viafoura Demo</title>
-    <meta
-      name="description"
-      content="Viafoura Demo Site to showcase best practices for all of our community tools"
-    />
-    <meta property="og:title" content="Viafoura Demo" />
-    <meta
-      property="og:description"
-      content="Viafoura Demo Site to showcase best practices for all of our community tools"
-    />
-    <meta property="og:image" content="/src/images/viafoura-demo.webp" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="733" />
-    <meta property="og:image:alt" content="Viafoura Demo" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Viafoura Demo" />
     <meta name="robots" content="noindex" />
+    <meta name="description" content={site.description} />
+    <meta name="vf:domain" content="demo.viafoura.com" />
+    {vfContainerId && <meta name="vf:container_id" content={vfContainerId} />}
+    <meta property="og:url" content="https://demo.viafoura.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:image" content="/src/images/viafoura-demo.webp" />
+    <meta property="og:image:alt" content={site.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <title>{title}</title>
+    <link rel="shortcut icon" href="/src/images/favicon.ico" type="image/x-icon" />
     <script src="/scripts/darkMode.js" is:inline></script>
   </head>
   <body>
