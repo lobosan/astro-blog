@@ -49,6 +49,6 @@ Viafoura **Social Login** attaches an avatar to a social profile and a human t
 
 Viafoura [**Audience Insights**](http://viafoura.wpengine.com/the-platform/) measures audience engagement and quantifies the impact of those engagement metrics on key performance indicators such as page views, attention time, reach, loyalty and revenue.
 
-<div class="viafoura">
+<div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>
 </div>

@@ -31,6 +31,6 @@ The OBR’s view reflects lower net immigration, and also weak productivity grow
 
 Bank of England Governor Mark Carney has referred to this as the economy’s “speed limit,” which he says has fallen in recent years. The BOE is even more gloomy on potential growth, partly because of a downbeat view of productivity.
 
-<div class="viafoura">
+<div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>
 </div>

@@ -41,6 +41,6 @@ Inspired by German beer gardens, and situated in Dundas West, this brewery featu
 
 The breweries listed above just begin to scratch the surface for what Toronto has to offer. There are dozens of other places to check out that will quench your thirst, regardless of what type of beer you prefer. Get out there and explore!
 
-<div class="viafoura">
+<div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>
 </div>

@@ -74,8 +74,6 @@ Many media companies also prevent the spread of misinformation by using credible
 
 Coronavirus-related news certainly won’t be slowing down anytime soon. Thankfully, you now have all the knowledge you need to help your newsroom and audience survive this explosion of information.
 
-<div id="vf-conversations-container">
-  <div class="viafoura">
-    <vf-conversations></vf-conversations>
-  </div>
+<div class="viafoura" id="vf-conversations-container">
+  <vf-conversations></vf-conversations>
 </div>

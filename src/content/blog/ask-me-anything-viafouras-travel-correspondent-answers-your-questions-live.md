@@ -14,6 +14,6 @@ Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel relat
 
 Simply post a message in the Conversations area below and Lindsday will reply to you asap. Please try to keep the questions specific to all things travel.
 
-<div class="viafoura">
+<div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>
 </div>

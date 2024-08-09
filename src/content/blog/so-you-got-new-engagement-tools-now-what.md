@@ -83,6 +83,6 @@ Once you have your engagement tools, your platform will transform into a place f
 
 Yet, the most effective on-site engagement tools can’t be left to run on their own. They need to be backed by strategy, community guidelines and actionable insights. Planning, testing and refining your business’ audience engagement process must be a constant effort. That way, your business can evolve as the industry evolves
 
-<div class="viafoura">
+<div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>
 </div>
