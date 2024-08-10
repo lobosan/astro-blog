@@ -1,0 +1,83 @@
+---
+import { TwicImg } from "@twicpics/components/react";
+import { getCollection } from "astro:content";
+
+import VfConversationsCount from "@/components/VfConversationsCount.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+const posts = await getCollection("blog");
+const heroSlug = "here-are-what-media-companies-are-doing-with-covid-19-overload";
+const postHero = posts.find((post) => post.slug === heroSlug);
+const postList = posts.filter((post) => post.slug !== heroSlug);
+---
+
+<MainLayout title="Viafoura Demo">
+  {
+    postHero && (
+      <article>
+        <a href={`posts/${postHero.slug}`}>
+          <div class="mb-5 shadow-2xl">
+            <TwicImg
+              eager
+              client:load
+              src={postHero.data.image}
+              alt={postHero.data.title}
+              ratio="16/9"
+            />
+          </div>
+        </a>
+        <div class="grid gap-x-6 sm:grid-cols-2">
+          <h1>
+            <a href={`posts/${postHero.slug}`} class="hover:underline">
+              {postHero.data.title}
+            </a>
+          </h1>
+          <div>
+            <p class="mb-4 mt-4 text-base text-gray-700 antialiased sm:mt-0">
+              {postHero.data.excerpt}
+            </p>
+            <div class="w-50 flex text-base font-semibold text-gray-800">
+              {postHero.data.author}
+              {postHero.body.includes("vf-conversations") && (
+                <VfConversationsCount
+                  slug={postHero.slug}
+                  vfContainerId={postHero.data.vfContainerId}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      </article>
+    )
+  }
+  <section class="pb-6 pt-11">
+    <h2 class="mb-6 flex items-center">More Stories</h2>
+    <div class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
+      {
+        postList.map((post) => (
+          <article>
+            <a href={`/posts/${post.slug}`}>
+              <div class="mb-5 shadow-2xl">
+                <TwicImg client:load src={post.data.image} alt={post.data.title} ratio="16/9" />
+              </div>
+            </a>
+            <h3 class="mb-3">
+              <a href={`/posts/${post.slug}`} class="hover:underline">
+                {post.data.title}
+              </a>
+            </h3>
+            <p class="mb-4 text-base text-gray-700 antialiased">{post.data.excerpt}</p>
+            <div class="w-50">
+              <div class="flex text-base font-semibold text-gray-800">
+                {post.data.author}
+                {post.body.includes("vf-conversations") && (
+                  <VfConversationsCount slug={post.slug} vfContainerId={post.data.vfContainerId} />
+                )}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>
