@@ -6,9 +6,6 @@
   html.dark {
     @apply bg-[#2A262B];
   }
-  body {
-    @apply font-sans;
-  }
   h1 {
     @apply text-4xl font-bold text-gray-800 antialiased;
   }
