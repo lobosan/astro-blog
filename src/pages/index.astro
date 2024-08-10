@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { TwicImg } from "@twicpics/components/react";
 import { getCollection } from "astro:content";
 
 import VfConversationsCount from "@/components/VfConversationsCount.astro";
@@ -16,21 +16,19 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
     postHero && (
       <article>
         <a href={`posts/${postHero.slug}`}>
-          <Image
-            class="mb-6 mt-8 aspect-video w-full object-cover shadow-xl"
-            src={postHero.data.image}
-            alt={postHero.data.title}
-            loading={"eager"}
-            format="avif"
-            width={1112}
-            height={626}
-            widths={[240, 540, 720, postHero.data.image.width]}
-            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${postHero.data.image.width}px`}
-          />
+          <div class="mb-5 shadow-2xl">
+            <TwicImg
+              eager
+              client:load
+              src={postHero.data.image}
+              alt={postHero.data.title}
+              ratio="16/9"
+            />
+          </div>
         </a>
         <div class="grid gap-x-6 sm:grid-cols-2">
           <h1>
-            <a href={`post/${postHero.slug}`} class="hover:underline">
+            <a href={`posts/${postHero.slug}`} class="hover:underline">
               {postHero.data.title}
             </a>
           </h1>
@@ -59,17 +57,9 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
         postList.map((post) => (
           <article>
             <a href={`/posts/${post.slug}`}>
-              <Image
-                class="mb-5 aspect-video w-full object-cover shadow-xl"
-                src={post.data.image}
-                alt={post.data.title}
-                loading={"lazy"}
-                format="avif"
-                width={524}
-                height={295}
-                widths={[240, 540, post.data.image.width]}
-                sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, ${post.data.image.width}px`}
-              />
+              <div class="mb-5 shadow-2xl">
+                <TwicImg client:load src={post.data.image} alt={post.data.title} ratio="16/9" />
+              </div>
             </a>
             <h3 class="mb-3">
               <a href={`/posts/${post.slug}`} class="hover:underline">
