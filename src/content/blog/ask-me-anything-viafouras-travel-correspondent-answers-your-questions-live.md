@@ -1,7 +1,7 @@
 ---
 vfContainerId: 100014
 title: "Ask me Anything: Viafoura's Travel Correspondent answers your questions live"
-image: "ask-me-anything-vf-travel.jpg"
+image: "/src/images/ask-me-anything-vf-travel.jpg"
 author: "Lindsay Singleton"
 topics: ["Travel"]
 excerpt: "Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Join the conversation now!"

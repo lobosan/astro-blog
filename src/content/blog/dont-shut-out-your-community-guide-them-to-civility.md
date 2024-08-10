@@ -1,7 +1,7 @@
 ---
 vfContainerId: 400014
 title: "Don't shut out your community, instead guide them towards civility"
-image: "dont-shut-out-your-community.jpg"
+image: "/src/images/dont-shut-out-your-community.jpg"
 author: "Tom Hardington"
 topics: ["Politics", "News"]
 excerpt: "It’s a common online mantra that is gaining traction. In fact, over the past year, several major Canadian publications such as the Toronto Star, Sun Media and The National Post have taken this phrase to heart, and made it so you can’t read comments."

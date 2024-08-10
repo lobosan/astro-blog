@@ -1,7 +1,7 @@
 ---
 vfContainerId: 101113526
 title: "Viafoura FC: Live Q&A"
-image: "viafoura-fc-live-qa.jpg"
+image: "/src/images/viafoura-fc-live-qa.jpg"
 author: "Norman Phillips"
 topics: ["Sports"]
 excerpt: "Viafoura FC manager Mick Lozar is online and taking questions from fans about the team and their trials and tribulations throughout the season. Join now!"

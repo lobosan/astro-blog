@@ -1,5 +1,5 @@
 ---
-import { TwicImg } from "@twicpics/components/react";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 import VfConversationsCount from "@/components/VfConversationsCount.astro";
@@ -16,15 +16,13 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
     postHero && (
       <article>
         <a href={`posts/${postHero.slug}`}>
-          <div class="mb-5 shadow-2xl">
-            <TwicImg
-              eager
-              client:load
-              src={postHero.data.image}
-              alt={postHero.data.title}
-              ratio="16/9"
-            />
-          </div>
+          <Image
+            class="mb-6 mt-8 aspect-video w-full object-cover shadow-xl"
+            src={postHero.data.image}
+            alt={postHero.data.title}
+            loading={"eager"}
+            format="avif"
+          />
         </a>
         <div class="grid gap-x-6 sm:grid-cols-2">
           <h1>
@@ -57,9 +55,12 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
         postList.map((post) => (
           <article>
             <a href={`/posts/${post.slug}`}>
-              <div class="mb-5 shadow-2xl">
-                <TwicImg client:load src={post.data.image} alt={post.data.title} ratio="16/9" />
-              </div>
+              <Image
+                class="mb-5 aspect-video w-full object-cover shadow-xl"
+                src={post.data.image}
+                alt={post.data.title}
+                format="avif"
+              />
             </a>
             <h3 class="mb-3">
               <a href={`/posts/${post.slug}`} class="hover:underline">

@@ -1,7 +1,7 @@
 ---
 vfContainerId: 101113521
 title: "Golden Globes 2024"
-image: "golden-globes.webp"
+image: "/src/images/golden-globes.webp"
 author: "Tom Hardington"
 topics: ["News"]
 excerpt: "Follow our live coverage for awards for film and American television productions of 2023."
