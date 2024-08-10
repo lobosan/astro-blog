@@ -2,7 +2,7 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as addAttribute, d as renderComponent, b as createAstro } from '../chunks/astro/server_DVnfWoNJ.mjs';
 import 'kleur/colors';
 import { TwicImg } from '@twicpics/components/react';
-import { g as getCollection, $ as $$MainLayout } from '../chunks/MainLayout_CV4UO7HO.mjs';
+import { g as getCollection, $ as $$MainLayout } from '../chunks/MainLayout_h9jYmYvY.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro();
