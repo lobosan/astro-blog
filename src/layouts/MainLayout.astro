@@ -1,5 +1,4 @@
 ---
-import "@fontsource-variable/inter";
 import "@/styles/globals.css";
 
 import Footer from "@/components/Footer.astro";
@@ -35,7 +34,13 @@ const site = {
     <meta property="og:site_name" content={site.name} />
     <title>{title}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <script src="/scripts/darkMode.js" is:inline></script>
+    <script is:inline>
+      if (localStorage.getItem("darkMode") === "true") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <Header />
@@ -44,6 +49,6 @@ const site = {
       <slot />
     </main>
     <Footer />
-    <script async src="//cdn.viafoura.net/entry/index.js" is:inline></script>
+    <!-- <script async src="//cdn.viafoura.net/entry/index.js" is:inline></script> -->
   </body>
 </html>
