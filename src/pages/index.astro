@@ -36,7 +36,7 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
               {postHero.data.excerpt}
             </p>
             <div class="w-50 flex text-base font-semibold text-gray-800">
-              {postHero.data.author}
+              {postHero.data.author.name}
               {postHero.body.includes("vf-conversations") && (
                 <VfConversationsCount
                   slug={postHero.slug}
@@ -72,7 +72,7 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
             <p class="mb-4 text-base text-gray-700 antialiased">{post.data.excerpt}</p>
             <div class="w-50">
               <div class="flex text-base font-semibold text-gray-800">
-                {post.data.author}
+                {post.data.author.name}
                 {post.body.includes("vf-conversations") && (
                   <VfConversationsCount slug={post.slug} vfContainerId={post.data.vfContainerId} />
                 )}

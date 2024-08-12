@@ -2,10 +2,10 @@
 vfContainerId: 200014
 title: "Here Are What Media Companies Are Doing to Deal With COVID-19 Information Overload"
 image: "/src/images/information-overload.jpg"
-author: "Norman Phillips"
+author: { name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
 topics: ["Media", "News"]
 excerpt: "With COVID-19 disrupting the world, the demand for news has never been greater. Newsrooms are being pushed to their limits as they test the most time-saving yet effective methods to sift through an infinite amount of coronavirus information, craft story after story and keep their teams safe."
-pubDate: "Jan 26 2022"
+pubDate: 2022-01-26
 productDemo: "Conversations"
 showLiveChat: false
 ---

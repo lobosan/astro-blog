@@ -2,10 +2,10 @@
 vfContainerId: 600030
 title: "The Microbrewery Scene in Toronto is Exploding"
 image: "/src/images/the-microbrewery-scene-in-toronto.jpg"
-author: "Lindsay Singleton"
+author: { name: "Lindsay Singleton", avatar: "/src/images/LindsaySingleton.jpg" }
 topics: ["Travel"]
 excerpt: "Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats."
-pubDate: "Aug 01 2022"
+pubDate: 2022-08-01
 showLiveChat: false
 ---
 

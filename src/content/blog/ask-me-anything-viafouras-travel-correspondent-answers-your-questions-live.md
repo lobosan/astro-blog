@@ -2,10 +2,10 @@
 vfContainerId: 100014
 title: "Ask me Anything: Viafoura's Travel Correspondent answers your questions live"
 image: "/src/images/ask-me-anything-vf-travel.jpg"
-author: "Lindsay Singleton"
+author: { name: "Lindsay Singleton", avatar: "/src/images/LindsaySingleton.jpg" }
 topics: ["Travel"]
 excerpt: "Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Join the conversation now!"
-pubDate: "Apr 09 2023"
+pubDate: 2023-04-09
 productDemo: "Conversations - Ask Me Anything"
 showLiveChat: false
 ---

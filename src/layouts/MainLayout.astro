@@ -8,10 +8,9 @@ import TopicsNav from "@/components/TopicsNav.astro";
 
 interface Props {
   title: string;
-  vfContainerId?: string;
 }
 
-const { title, vfContainerId } = Astro.props;
+const { title } = Astro.props;
 const site = {
   name: "Viafoura Demo",
   description: "Viafoura Demo Site to showcase best practices for all of our community tools",
@@ -24,8 +23,6 @@ const site = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <meta name="description" content={site.description} />
-    <meta name="vf:domain" content="demo.viafoura.com" />
-    {vfContainerId && <meta name="vf:container_id" content={vfContainerId} />}
     <meta property="og:url" content="https://demo.viafoura.com/" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={site.description} />
@@ -33,6 +30,8 @@ const site = {
     <meta property="og:image:alt" content={site.name} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
+    <meta name="vf:domain" content="demo.viafoura.com" />
+    <slot name="head" />
     <title>{title}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script is:inline>

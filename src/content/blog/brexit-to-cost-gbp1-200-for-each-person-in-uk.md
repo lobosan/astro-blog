@@ -2,10 +2,10 @@
 vfContainerId: 300014
 title: "Brexit to cost £1,200 for each person in UK"
 image: "/src/images/brexit-cost-in-uk.jpg"
-author: "Tom Hardington"
+author: { name: "Tom Hardington", avatar: "/src/images/TomHardington.jpg" }
 topics: ["Politics", "News"]
 excerpt: "Boris Johnson’s Brexit will hinder monetary development to the tune of £1,200 for each individual in the nation, the administration’s spending guard dog has said."
-pubDate: "Mar 06 2022"
+pubDate: 2022-03-06
 showLiveChat: false
 ---
 
