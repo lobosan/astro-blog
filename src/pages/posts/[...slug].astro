@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
 
+import Aside from "@/components/Aside.astro";
+import VfConversationsCount from "@/components/VfConversationsCount.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
@@ -36,15 +38,13 @@ const { Content } = await post.render();
       </h1>
       <div class="my-5 sm:flex">
         <div class="flex items-center space-x-3">
-          <div>
-            <Image
-              class="h-12 w-12 rounded-full"
-              src={post.data.author.avatar}
-              alt={post.data.author.name}
-              loading="eager"
-              width="200"
-            />
-          </div>
+          <Image
+            class="h-12 w-12 rounded-full"
+            src={post.data.author.avatar}
+            alt={post.data.author.name}
+            loading="eager"
+            width="200"
+          />
           <div class="ml-[1px] font-semibold">{post.data.author.name}</div>
           <div class="viafoura">
             <vf-topic-follow
@@ -70,29 +70,7 @@ const { Content } = await post.render();
           <div
             class="flex border-l border-b-neutral-300 pl-3 font-semibold text-gray-800 dark:border-neutral-600"
           >
-            <a
-              class="mr-3 flex hover:underline"
-              href="#vf-conversations-container"
-              title="Join the Conversation"
-              ><svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                class="mr-1 mt-[3px] h-5 w-5"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
-                <path
-                  d="M20 2H4c-1.103 0-2 .897-2 2v18l5.333-4H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14H6.667L4 18V4h16v12z"
-                ></path>
-              </svg>
-              <div class="viafoura">
-                <vf-conversations-count vf-container-id="200015"></vf-conversations-count>
-              </div></a
-            >
+            <VfConversationsCount vfContainerId={post.data.vfContainerId} />
           </div>
         </div>
       </div>
@@ -114,7 +92,8 @@ const { Content } = await post.render();
         class="mb-5 aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
-        height={758}
+        loading="eager"
+        height="758"
       />
       <div class="block xl:hidden">
         <div class="viafoura custom-sharebar">
@@ -134,23 +113,6 @@ const { Content } = await post.render();
         <Content />
       </div>
     </article>
-    <div class="ml-8 hidden w-[310px] lg:block">
-      <div class="min-h-[275px] min-w-[300px]">
-        <div class="viafoura">
-          <vf-standalone-ad></vf-standalone-ad>
-        </div>
-      </div>
-      <div class="mt-7">
-        <div class="viafoura">
-          <vf-trending-articles
-            title="Trending Articles"
-            limit="5"
-            days-published="1"
-            trend-window="1"
-            sort="comments"
-            view="full"></vf-trending-articles>
-        </div>
-      </div>
-    </div>
+    <Aside />
   </div>
 </MainLayout>

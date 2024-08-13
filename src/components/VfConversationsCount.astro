@@ -1,15 +1,16 @@
 ---
 interface Props {
-  slug: string;
   vfContainerId: number;
+  slug?: string;
 }
 
-const { slug, vfContainerId } = Astro.props;
+const { vfContainerId, slug } = Astro.props;
+const link = slug ? `/posts/${slug}` : "";
 ---
 
 <a
   class="mr-3 flex hover:underline"
-  href={`/posts/${slug}#vf-conversations-container`}
+  href={`${link}#vf-conversations-container`}
   title="Join the Conversation"
 >
   <svg
