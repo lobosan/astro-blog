@@ -4,6 +4,8 @@ import { type CollectionEntry, getCollection } from "astro:content";
 
 import Aside from "@/components/Aside.astro";
 import VfConversationsCount from "@/components/VfConversationsCount.astro";
+import VfShareBarHorizontal from "@/components/VfShareBarHorizontal.astro";
+import VfShareBarVertical from "@/components/VfShareBarVertical.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
@@ -74,42 +76,16 @@ const { Content } = await post.render();
           </div>
         </div>
       </div>
-      <div class="hidden xl:block">
-        <div class="viafoura custom-sharebar-vertical" style="min-height: 375px">
-          <div
-            class="vf-widget vf-share-bar-circle vf-share-bar-vertical"
-            data-widget="sharebar"
-            data-button-view="false"
-            data-show-labels="false"
-            data-show-counters="false"
-            data-show-total="true"
-            data-path="/"
-          >
-          </div>
-        </div>
-      </div>
+      <VfShareBarVertical />
       <Image
-        class="mb-5 aspect-video w-full rounded-md object-cover shadow-lg"
+        class="aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
         loading="eager"
         height="758"
       />
-      <div class="block xl:hidden">
-        <div class="viafoura custom-sharebar">
-          <div
-            class="vf-widget vf-share-bar-circle vf-share-bar-horizontal"
-            data-widget="sharebar"
-            data-button-view="false"
-            data-show-labels="false"
-            data-show-counters="false"
-            data-show-total="true"
-            data-path="/"
-          >
-          </div>
-        </div>
-      </div>
-      <div class="prose prose-sky max-w-4xl">
+      <VfShareBarHorizontal />
+      <div class="prose prose-sky mt-5 max-w-4xl">
         <Content />
       </div>
     </article>

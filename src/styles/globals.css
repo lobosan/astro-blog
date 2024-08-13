@@ -80,19 +80,6 @@ header .viafoura .vf-tray-trigger:focus {
   border: none !important;
   box-shadow: none !important;
 }
-.viafoura.custom-sharebar-vertical {
-  position: absolute;
-  left: -90px;
-  min-width: 40px;
-}
-.vf-share-bar.vf-share-bar-horizontal {
-  margin: -20px 0 20px -10px !important;
-}
-.vf-share-bar-vertical ul {
-  position: fixed !important;
-  top: 50%;
-  transform: translateY(-50%);
-}
 .vf-trending-articles__header {
   @apply pb-2 text-lg font-bold capitalize !important;
 }
