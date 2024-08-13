@@ -73,6 +73,7 @@ header .viafoura .vf-tray-trigger:focus {
 
 /* Viafoura Classes */
 .viafoura {
+  --primary-font: "Inter Variable", sans-serif;
   --reserved-space-top: 62px !important;
 }
 .viafoura input:focus,

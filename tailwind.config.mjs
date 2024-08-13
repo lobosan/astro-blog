@@ -1,6 +1,5 @@
 import formsPlugin from "@tailwindcss/forms";
 import typographyPlugin from "@tailwindcss/typography";
-import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter Variable", "sans-serif"],
       },
       screens: {
         sm: "640px",
