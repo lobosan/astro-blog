@@ -4,8 +4,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 
 import Aside from "@/components/Aside.astro";
 import VfConversationsCount from "@/components/VfConversationsCount.astro";
-import VfShareBarHorizontal from "@/components/VfShareBarHorizontal.astro";
-import VfShareBarVertical from "@/components/VfShareBarVertical.astro";
+import VfShareBar from "@/components/VfShareBar.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
@@ -76,7 +75,6 @@ const { Content } = await post.render();
           </div>
         </div>
       </div>
-      <VfShareBarVertical />
       <Image
         class="aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
@@ -84,7 +82,7 @@ const { Content } = await post.render();
         loading="eager"
         height="758"
       />
-      <VfShareBarHorizontal />
+      <VfShareBar />
       <div class="prose prose-sky mt-5 max-w-4xl">
         <Content />
       </div>
