@@ -9,7 +9,6 @@
     "format": "prettier -w . && eslint --fix ."
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.0.20",
     "astro": "^4.13.3"
   },
   "devDependencies": {
