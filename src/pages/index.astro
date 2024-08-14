@@ -20,8 +20,8 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
             class="mb-6 mt-8 aspect-video w-full rounded-md object-cover shadow-2xl"
             src={postHero.data.image}
             alt={postHero.data.title}
-            widths={[600, 1024]}
-            sizes={"(max-width: 639px) 600px, 1024px"}
+            widths={[500, 1024]}
+            sizes={"(max-width: 576px) 500px, 1024px"}
             format="avif"
             loading="eager"
           />
@@ -61,8 +61,8 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
                 class="mb-5 aspect-video w-full rounded-md object-cover shadow-2xl"
                 src={data.image}
                 alt={data.title}
-                widths={[600, 720]}
-                sizes={"(max-width: 639px) 600px, 720px"}
+                widths={[500, 720]}
+                sizes={"(max-width: 576px) 500px, 720px"}
                 format="avif"
               />
             </a>
