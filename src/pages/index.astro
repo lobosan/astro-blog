@@ -17,10 +17,11 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
       <article>
         <a href={`posts/${postHero.slug}`}>
           <Image
-            class="mb-6 mt-8 aspect-video w-full rounded-md object-cover shadow-2xl"
+            class="mb-6 mt-8 w-full rounded-md object-cover shadow-2xl"
             src={postHero.data.image}
             alt={postHero.data.title}
-            width={1112}
+            width={16}
+            height={9}
             widths={[500, 1024]}
             sizes={"(max-width: 576px) 500px, 1024px"}
             format="avif"
@@ -59,10 +60,11 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
           <article>
             <a href={`/posts/${slug}`}>
               <Image
-                class="mb-5 aspect-video w-full rounded-md object-cover shadow-2xl"
+                class="mb-5 w-full rounded-md object-cover shadow-2xl"
                 src={data.image}
                 alt={data.title}
-                width={524}
+                width={16}
+                height={9}
                 widths={[500, 720]}
                 sizes={"(max-width: 576px) 500px, 720px"}
                 format="avif"
