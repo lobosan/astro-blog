@@ -20,9 +20,10 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
             class="mb-6 mt-8 aspect-video w-full rounded-md object-cover shadow-2xl"
             src={postHero.data.image}
             alt={postHero.data.title}
-            width="1024"
-            loading="eager"
+            widths={[600, 1024]}
+            sizes={"(max-width: 639px) 600px, 1024px"}
             format="avif"
+            loading="eager"
           />
         </a>
         <div class="grid gap-x-6 sm:grid-cols-2">
@@ -60,7 +61,8 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
                 class="mb-5 aspect-video w-full rounded-md object-cover shadow-2xl"
                 src={data.image}
                 alt={data.title}
-                width="720"
+                widths={[600, 720]}
+                sizes={"(max-width: 639px) 600px, 720px"}
                 format="avif"
               />
             </a>

@@ -43,8 +43,9 @@ const { Content } = await post.render();
             class="h-12 w-12 rounded-full"
             src={post.data.author.avatar}
             alt={post.data.author.name}
-            loading="eager"
             width="200"
+            format="avif"
+            loading="eager"
           />
           <div class="ml-[1px] font-semibold">{post.data.author.name}</div>
           <div class="viafoura">
@@ -79,8 +80,10 @@ const { Content } = await post.render();
         class="aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
+        widths={[600, 780]}
+        sizes={"(max-width: 639px) 600px, 780px"}
+        format="avif"
         loading="eager"
-        width="780"
       />
       <VfShareBar />
       <div class="prose-black prose mt-5 max-w-4xl">
