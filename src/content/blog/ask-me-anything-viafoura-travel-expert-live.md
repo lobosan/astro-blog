@@ -1,6 +1,6 @@
 ---
 vfContainerId: 100014
-title: "Ask me Anything: Viafoura's Travel Correspondent answers your questions live"
+title: "Ask Me Anything: Viafoura’s Travel Expert Answers Live"
 image: "/src/images/ask-me-anything-vf-travel.jpg"
 author: { name: "Lindsay Singleton", avatar: "/src/images/LindsaySingleton.jpg" }
 topics: ["Travel"]

@@ -1,6 +1,6 @@
 ---
 vfContainerId: 101113523
-title: "VF Rams vs OW Officers Gameday: Follow the Action Live!"
+title: "Viafoura Rams vs OW Officers Gameday: Follow the Action Live!"
 image: "/src/images/vf-rams-vs-ow-officers.jpg"
 author: { name: "Tom Hardington", avatar: "/src/images/TomHardington.jpg" }
 topics: ["Sports"]

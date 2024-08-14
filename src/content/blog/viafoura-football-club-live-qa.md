@@ -1,6 +1,6 @@
 ---
 vfContainerId: 101113526
-title: "Viafoura FC: Live Q&A"
+title: "Viafoura Football Club: Live Q&A"
 image: "/src/images/viafoura-fc-live-qa.jpg"
 author: { name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
 topics: ["Sports"]

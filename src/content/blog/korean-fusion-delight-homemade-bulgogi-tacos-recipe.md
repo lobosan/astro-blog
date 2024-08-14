@@ -1,6 +1,6 @@
 ---
 vfContainerId: 700000
-title: "Korean Fusion Delight - Homemade Bulgogi Tacos Recipe"
+title: "Korean Fusion Delight: Homemade Bulgogi Tacos Recipe"
 image: "/src/images/korean-fusion-delight.jpg"
 author: { name: "Jocelyn Russell", avatar: "/src/images/JocelynRussell.jpg" }
 topics: ["Travel"]
