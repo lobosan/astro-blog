@@ -80,6 +80,7 @@ const { Content } = await post.render();
         class="aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
+        width={780}
         widths={[500, 780]}
         sizes={"(max-width: 576px) 500px, 780px"}
         format="avif"
