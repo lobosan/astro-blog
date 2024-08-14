@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 import VfConversationsCount from "@/components/VfConversationsCount.astro";
-import MainLayout from "@/layouts/MainLayout.astro";
+import Layout from "@/Layout.astro";
 
 const posts = await getCollection("blog");
 const heroSlug = "how-media-companies-handle-covid-19-information-overload";
@@ -11,7 +11,7 @@ const postHero = posts.find((post) => post.slug === heroSlug);
 const postList = posts.filter((post) => post.slug !== heroSlug);
 ---
 
-<MainLayout title="Viafoura Demo">
+<Layout title="Viafoura Demo">
   {
     postHero && (
       <article>
@@ -83,4 +83,4 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
       }
     </div>
   </section>
-</MainLayout>
+</Layout>
