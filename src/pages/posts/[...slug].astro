@@ -40,7 +40,7 @@ const { Content } = await post.render();
       <div class="my-5 sm:flex">
         <div class="flex items-center space-x-3">
           <Image
-            class="h-12 w-12 rounded-full"
+            class="aspect-square h-12 w-12 rounded-full"
             src={post.data.author.avatar}
             alt={post.data.author.name}
             width={200}
@@ -78,13 +78,13 @@ const { Content } = await post.render();
         </div>
       </div>
       <Image
-        class="w-full rounded-md object-cover shadow-lg"
+        class="aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
-        width={16}
-        height={9}
-        widths={[500, 780]}
-        sizes={"(max-width: 576px) 500px, 780px"}
+        width={780}
+        height={439}
+        widths={[412, 780]}
+        sizes={"(max-width: 721px) 412px, 780px"}
         format="avif"
         loading="eager"
       />
