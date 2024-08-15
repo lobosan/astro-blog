@@ -4,17 +4,38 @@ import { getCollection } from "astro:content";
 const posts = await getCollection("blog");
 ---
 
+<style>
+  .icon {
+    transition:
+      opacity 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hidden-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  .visible-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+</style>
+
 <div class="relative h-8">
   <button
     id="toggle-menu"
     title="Toggle Menu"
     aria-expanded="false"
     aria-controls="menu"
-    class="h-8 w-8"
+    class="relative h-8 w-8"
   >
     <svg
-      id="menu-icon"
-      class="h-8 w-8"
+      id="hamburger-icon"
+      class="icon visible-icon h-8 w-8"
       stroke="#fff"
       fill="#fff"
       stroke-width="0"
@@ -22,6 +43,20 @@ const posts = await getCollection("blog");
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
+    </svg>
+
+    <svg
+      id="close-icon"
+      class="icon hidden-icon h-8 w-8"
+      stroke="#fff"
+      fill="#fff"
+      stroke-width="0"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+      ></path>
     </svg>
   </button>
 
@@ -56,22 +91,17 @@ const posts = await getCollection("blog");
 <script>
   const toggleMenu = document.getElementById("toggle-menu");
   const menu = document.getElementById("menu");
-  const menuIcon = document.getElementById("menu-icon");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const closeIcon = document.getElementById("close-icon");
 
-  const hamburgerSVG = `
-    <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
-  `;
-  const closeSVG = `
-    <path
-      d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
-    ></path>
-  `;
-
-  if (toggleMenu && menu && menuIcon) {
+  if (toggleMenu && menu && hamburgerIcon && closeIcon) {
     toggleMenu.addEventListener("click", () => {
       const isMenuOpen = menu.classList.toggle("hidden");
       toggleMenu.setAttribute("aria-expanded", (!isMenuOpen).toString());
-      menuIcon.innerHTML = isMenuOpen ? hamburgerSVG : closeSVG;
+      hamburgerIcon.classList.toggle("hidden-icon", !isMenuOpen);
+      hamburgerIcon.classList.toggle("visible-icon", isMenuOpen);
+      closeIcon.classList.toggle("hidden-icon", isMenuOpen);
+      closeIcon.classList.toggle("visible-icon", !isMenuOpen);
     });
   }
 </script>
