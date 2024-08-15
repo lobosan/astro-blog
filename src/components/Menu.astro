@@ -7,7 +7,7 @@ const posts = await getCollection("blog");
 <div class="relative h-8">
   <button
     id="toggle-menu"
-    title="Open Menu"
+    title="Toggle Menu"
     aria-expanded="false"
     aria-controls="menu"
     class="h-8 w-8"
@@ -36,10 +36,10 @@ const posts = await getCollection("blog");
     <nav>
       {
         posts
-          .filter(({ data }) => data.productDemo)
-          .map(({ slug, data: { productDemo } }) => (
-            <a href={`/posts/${slug}`} title={productDemo} class="sales-menu-link">
-              {productDemo}
+          .filter(post => post.data.productDemo)
+          .map(post => (
+            <a href={`/posts/${post.slug}`} title={post.data.productDemo} class="sales-menu-link">
+              {post.data.productDemo}
             </a>
           ))
       }
