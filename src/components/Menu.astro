@@ -1,3 +1,9 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+---
+
 <div class="h-8 w-8">
   <button id="open-menu" title="Open Menu">
     <svg
@@ -7,8 +13,9 @@
       stroke-width="0"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      ><path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path></svg
     >
+      <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
+    </svg>
   </button>
   <div id="menu" class="relative -top-[35px] z-20 hidden">
     <div
@@ -17,12 +24,14 @@
       <div class="mb-2 flex items-center justify-between">
         <div class="ml-2 text-xl font-bold hover:text-red-700 dark:text-white">
           <a href="/" title="Viafoura">Viafoura</a>
-        </div><div>
+        </div>
+        <div>
           <button
             id="close-menu"
             title="Close Menu"
             class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-neutral-700"
-            ><svg
+          >
+            <svg
               stroke="currentColor"
               fill="currentColor"
               stroke-width="0"
@@ -31,40 +40,30 @@
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
-              ><path
+            >
+              <path
                 d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
-              ></path></svg
-            ></button
-          >
+              ></path>
+            </svg>
+          </button>
         </div>
-      </div><nav>
-        <a
-          href="/posts/how-media-companies-handle-covid-19-information-overload"
-          title="Conversations"
-          class="sales-menu-link">Conversations</a
-        ><a
-          href="/posts/ask-me-anything-viafoura-travel-expert-live"
-          title="Conversations - Ask Me Anything"
-          class="sales-menu-link">Conversations - Ask Me Anything</a
-        ><a
-          href="/posts/viafoura-rams-vs-ow-officers-gameday-live"
-          title="Live Blog - Gameday"
-          class="sales-menu-link">Live Blog - Gameday</a
-        ><a href="/posts/golden-globes-2024" title="Live Blog - News" class="sales-menu-link"
-          >Live Blog - News</a
-        ><a
-          href="/posts/viafoura-football-club-live-qa"
-          title="Live Chat - Sports Q&A"
-          class="sales-menu-link">Live Chat - Sports Q&A</a
-        ><a
-          href="/posts/korean-fusion-delight-homemade-bulgogi-tacos-recipe"
-          title="Ratings & Reviews"
-          class="sales-menu-link">Ratings & Reviews</a
-        ><a href="/livechat-overlay" title="Live Chat - Overlay" class="sales-menu-link"
-          >Live Chat - Overlay</a
-        ><a href="/broadcast-notification" title="Broadcast Notification" class="sales-menu-link"
-          >Broadcast Notification</a
-        >
+      </div>
+      <nav>
+        {
+          posts
+            .filter(post => post.data.productDemo)
+            .map(post => (
+              <a href={`/posts/${post.slug}`} title={post.data.productDemo} class="sales-menu-link">
+                {post.data.productDemo}
+              </a>
+            ))
+        }
+        <a href="/livechat-overlay" title="Live Chat - Overlay" class="sales-menu-link">
+          Live Chat - Overlay
+        </a>
+        <a href="/broadcast-notification" title="Broadcast Notification" class="sales-menu-link">
+          Broadcast Notification
+        </a>
       </nav>
     </div>
   </div>
