@@ -4,27 +4,6 @@ import { getCollection } from "astro:content";
 const posts = await getCollection("blog");
 ---
 
-<style>
-  .icon {
-    transition:
-      opacity 0.3s ease-in-out,
-      transform 0.3s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .hidden-icon {
-    opacity: 0;
-    transform: rotate(90deg);
-  }
-
-  .visible-icon {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-</style>
-
 <div class="relative h-8">
   <button
     id="toggle-menu"
@@ -34,8 +13,8 @@ const posts = await getCollection("blog");
     class="relative h-8 w-8"
   >
     <svg
-      id="hamburger-icon"
-      class="icon visible-icon h-8 w-8"
+      id="open-icon"
+      class="absolute left-0 top-0 h-8 w-8 rotate-0 opacity-100 transition-all duration-300 ease-in-out"
       stroke="#fff"
       fill="#fff"
       stroke-width="0"
@@ -47,7 +26,7 @@ const posts = await getCollection("blog");
 
     <svg
       id="close-icon"
-      class="icon hidden-icon h-8 w-8"
+      class="absolute left-0 top-0 h-8 w-8 rotate-90 opacity-0 transition-all duration-300 ease-in-out"
       stroke="#fff"
       fill="#fff"
       stroke-width="0"
@@ -91,17 +70,23 @@ const posts = await getCollection("blog");
 <script>
   const toggleMenu = document.getElementById("toggle-menu");
   const menu = document.getElementById("menu");
-  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const openIcon = document.getElementById("open-icon");
   const closeIcon = document.getElementById("close-icon");
 
-  if (toggleMenu && menu && hamburgerIcon && closeIcon) {
+  if (toggleMenu && menu && openIcon && closeIcon) {
     toggleMenu.addEventListener("click", () => {
       const isMenuOpen = menu.classList.toggle("hidden");
       toggleMenu.setAttribute("aria-expanded", (!isMenuOpen).toString());
-      hamburgerIcon.classList.toggle("hidden-icon", !isMenuOpen);
-      hamburgerIcon.classList.toggle("visible-icon", isMenuOpen);
-      closeIcon.classList.toggle("hidden-icon", isMenuOpen);
-      closeIcon.classList.toggle("visible-icon", !isMenuOpen);
+
+      openIcon.classList.toggle("opacity-0", !isMenuOpen);
+      openIcon.classList.toggle("rotate-90", !isMenuOpen);
+      openIcon.classList.toggle("opacity-100", isMenuOpen);
+      openIcon.classList.toggle("rotate-0", isMenuOpen);
+
+      closeIcon.classList.toggle("opacity-0", isMenuOpen);
+      closeIcon.classList.toggle("rotate-90", isMenuOpen);
+      closeIcon.classList.toggle("opacity-100", !isMenuOpen);
+      closeIcon.classList.toggle("rotate-0", !isMenuOpen);
     });
   }
 </script>
