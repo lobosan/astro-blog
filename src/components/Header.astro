@@ -1,18 +1,10 @@
+---
+import Menu from "@/components/Menu.astro";
+---
+
 <header class="sticky top-0 z-10 h-16 max-w-full bg-neutral-800 px-4 py-3 dark:bg-[#090909]">
   <div class="mx-auto flex max-w-6xl items-center">
-    <div class="h-8 w-8">
-      <button title="Open Menu">
-        <svg
-          class="h-8 w-8"
-          stroke="#fff"
-          fill="#fff"
-          stroke-width="0"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          ><path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path></svg
-        >
-      </button>
-    </div>
+    <Menu />
     <div class="mx-auto h-[30px] w-[150px]">
       <a href="/" title="Viafoura" aria-label="Viafoura">
         <svg
@@ -72,7 +64,9 @@
       </a>
     </div>
     <div class="h-10 w-10 rounded-full bg-neutral-700 hover:bg-neutral-600">
-      <div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+      <div class="viafoura">
+        <vf-tray-trigger></vf-tray-trigger>
+      </div>
     </div>
   </div>
 </header>
