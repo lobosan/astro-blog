@@ -9,6 +9,7 @@
     "format": "prettier -w . && eslint --fix ."
   },
   "dependencies": {
+    "@sentry/astro": "^8.26.0",
     "astro": "^4.13.3"
   },
   "devDependencies": {
