@@ -23,7 +23,6 @@ const posts = await getCollection("blog");
     >
       <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
     </svg>
-
     <svg
       id="close-icon"
       class="absolute left-0 top-0 h-8 w-8 rotate-90 opacity-0 transition-all duration-300 ease-in-out"
@@ -38,7 +37,6 @@ const posts = await getCollection("blog");
       ></path>
     </svg>
   </button>
-
   <div
     id="menu"
     class="absolute left-0 z-20 hidden w-80 rounded border bg-white p-3 pb-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-800"
@@ -46,11 +44,11 @@ const posts = await getCollection("blog");
     <div class="mb-2 flex items-center justify-between">
       <div class="ml-2 text-xl font-bold dark:text-white">Menu</div>
     </div>
-
     <nav>
       {
         posts
           .filter(post => post.data.productDemo)
+          .sort((a, b) => (a.data.productDemo ?? "").localeCompare(b.data.productDemo ?? ""))
           .map(post => (
             <a href={`/posts/${post.slug}`} title={post.data.productDemo} class="sales-menu-link">
               {post.data.productDemo}
