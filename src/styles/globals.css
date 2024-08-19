@@ -95,7 +95,7 @@ header .viafoura .vf-tray-trigger:focus {
   @apply pb-2 text-lg font-bold capitalize !important;
 }
 .vf-comments-count {
-  @apply text-base font-semibold text-gray-800 !important;
+  @apply text-sm font-semibold text-gray-500 !important;
 }
 .vf-expanding-hover-light::before {
   border-width: 0 0 3px 0 !important;
@@ -104,6 +104,17 @@ header .viafoura .vf-tray-trigger:focus {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.vf-share-bar {
+  padding-top: 0 !important;
+}
+.vf-share-bar-horizontal li:first-child {
+  margin-left: 0px !important;
+}
+.vf-total-share-label {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .vf-topic-follow-button {
   border-color: #ccc !important;

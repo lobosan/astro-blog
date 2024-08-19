@@ -32,18 +32,8 @@ const { Content } = await post.render();
       <h1 class="mb-2 mt-3 text-center lg:text-left">
         {post.data.title}
       </h1>
-      <time class="text-sm text-gray-500" datetime={post.data.pubDate.toISOString().split("T")[0]}
-        >{
-          post.data.pubDate.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            timeZone: "UTC",
-          })
-        }</time
-      >
-      <div class="my-5 sm:flex">
-        <div class="flex items-center space-x-3">
+      <div class="my-7">
+        <div class="flex items-center gap-3">
           <Image
             class="aspect-square h-12 w-12 rounded-full"
             src={post.data.author.avatar}
@@ -59,11 +49,23 @@ const { Content } = await post.render();
               topic-id={post.data.author.id}
               topic-name={post.data.author.name}
               topic-type="author"
-              show-count="true"
+              show-count="false"
               minimum-count="5"></vf-topic-follow>
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="mt-2 flex items-center">
+          <time
+            class="mt-[1px] text-sm font-semibold text-gray-500"
+            datetime={post.data.pubDate.toISOString().split("T")[0]}
+            >{
+              post.data.pubDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: "UTC",
+              })
+            }</time
+          >
           {
             post.body.includes("vf-conversations") && (
               <VfConversationsCount vfContainerId={post.data.vfContainerId} />
@@ -72,7 +74,7 @@ const { Content } = await post.render();
         </div>
       </div>
       <Image
-        class="aspect-video w-full rounded-md object-cover shadow-lg"
+        class="mb-7 aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
         width={780}
@@ -83,7 +85,7 @@ const { Content } = await post.render();
         loading="eager"
       />
       <VfShareBar />
-      <div class="prose-black prose mt-5 max-w-4xl">
+      <div class="prose-black prose max-w-4xl">
         <Content />
       </div>
     </article>
