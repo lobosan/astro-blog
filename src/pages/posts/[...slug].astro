@@ -32,6 +32,16 @@ const { Content } = await post.render();
       <h1 class="mb-2 mt-3 text-center lg:text-left">
         {post.data.title}
       </h1>
+      <time class="text-sm text-gray-500" datetime={post.data.pubDate.toISOString().split("T")[0]}
+        >{
+          post.data.pubDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZone: "UTC",
+          })
+        }</time
+      >
       <div class="my-5 sm:flex">
         <div class="flex items-center space-x-3">
           <Image
@@ -46,31 +56,19 @@ const { Content } = await post.render();
           <div class="ml-[1px] font-semibold">{post.data.author.name}</div>
           <div class="viafoura">
             <vf-topic-follow
-              topic-id={post.data.author.name.toLowerCase().replace(/ /g, "-")}
+              topic-id={post.data.author.id}
               topic-name={post.data.author.name}
               topic-type="author"
               show-count="true"
               minimum-count="5"></vf-topic-follow>
           </div>
         </div>
-        <div class="flex items-center sm:pl-4">
-          <div class="mr-3 border-b-neutral-300 dark:border-neutral-600 sm:border-l sm:pl-3">
-            <time datetime={post.data.pubDate.toISOString().split("T")[0]}
-              >{
-                post.data.pubDate.toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                  timeZone: "UTC",
-                })
-              }</time
-            >
-          </div>
-          <div
-            class="flex border-l border-b-neutral-300 pl-3 font-semibold text-gray-800 dark:border-neutral-600"
-          >
-            <VfConversationsCount vfContainerId={post.data.vfContainerId} />
-          </div>
+        <div class="flex items-center">
+          {
+            post.body.includes("vf-conversations") && (
+              <VfConversationsCount vfContainerId={post.data.vfContainerId} />
+            )
+          }
         </div>
       </div>
       <Image
