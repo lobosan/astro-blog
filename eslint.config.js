@@ -13,60 +13,46 @@ export default [
   ...eslintPluginAstro.configs.recommended,
   {
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      globals: { ...globals.browser, ...globals.node },
     },
   },
   {
     files: ["**/*.astro"],
     languageOptions: {
       parser: astroEslintParser,
-      parserOptions: {
-        parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro"],
-      },
+      parserOptions: { parser: "@typescript-eslint/parser", extraFileExtensions: [".astro"] },
     },
   },
   {
     files: ["**/*.{ts,tsx}", "**/*.astro/*.js"],
-    languageOptions: {
-      parser: typescriptParser,
-    },
+    languageOptions: { parser: typescriptParser },
     rules: {
       "no-unused-vars": "off",
       "@typescript-eslint/triple-slash-reference": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
-        {
-          argsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
-        },
+        { argsIgnorePattern: "^_", destructuredArrayIgnorePattern: "^_" },
       ],
     },
   },
   {
     files: ["**/*.{js,jsx,ts,tsx,astro}"],
-    plugins: {
-      import: importPlugin,
-      "simple-import-sort": simpleImportSort,
-    },
+    plugins: { "simple-import-sort": simpleImportSort, import: importPlugin },
     rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
       "import/order": [
         "error",
         {
+          "newlines-between": "always",
+          alphabetize: { order: "asc", caseInsensitive: true },
           groups: [
             ["builtin", "external"],
             ["internal", "parent", "sibling", "index"],
           ],
-          "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
     },
   },
   {
