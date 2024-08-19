@@ -2,12 +2,14 @@
 vfContainerId: 600030
 title: "The Microbrewery Scene in Toronto is Exploding"
 image: "/src/images/the-microbrewery-scene-in-toronto.jpg"
-author: { name: "Lindsay Singleton", avatar: "/src/images/LindsaySingleton.jpg" }
-topics: ["Travel"]
+author: { id: 87820884, name: "Lindsay Singleton", avatar: "/src/images/LindsaySingleton.jpg" }
+topics: [{ id: 84596441, name: "Travel" }]
 excerpt: "Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats."
 pubDate: 2022-08-01
 showLiveChat: false
 ---
+
+import VfTopics from "@/components/VfTopics.astro";
 
 Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats. If you haven't visited a microbrewery in Toronto yet, what are you waiting for? Most areas of the city offer a number of different options, and we've compiled some of our favourties below:
 
@@ -36,10 +38,18 @@ There are plenty of options when you're looking to grab a pint in Kensington Mar
 Inspired by German beer gardens, and situated in Dundas West, this brewery features a spacious outdoor patio, with picnic tables and trees. Owners Stephane Dubois and Shehzad Hamza created a very cozy atmosphere for sampling the microbrewery’s range of beers and delicious eats.
 
 <div class="viafoura">
-  <vf-content-recirculation title="Trending Conversations" limit="5" days-published="1" trend-window="1" sort="comments"></vf-content-recirculation>
+  <vf-content-recirculation
+    title="Trending Conversations"
+    limit="5"
+    days-published="1"
+    trend-window="1"
+    sort="comments"
+  ></vf-content-recirculation>
 </div>
 
 The breweries listed above just begin to scratch the surface for what Toronto has to offer. There are dozens of other places to check out that will quench your thirst, regardless of what type of beer you prefer. Get out there and explore!
+
+<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
 
 <div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>

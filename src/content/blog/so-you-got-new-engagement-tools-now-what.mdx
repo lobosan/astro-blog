@@ -2,12 +2,14 @@
 vfContainerId: 500028
 title: "So you got New Engagement Tools, Now What?"
 image: "/src/images/so-you-got-new-engagement-tools.jpg"
-author: { name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
-topics: ["Media", "News"]
+author: { id: 60055331, name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
+topics: [{ id: 60055334, name: "Media" }, { id: 60055332, name: "News" }]
 excerpt: "With the decline of trust in social media advertising, media organizations are exploring new technologies, specifically on-site engagement tools that build audiences on their own platforms."
 pubDate: 2024-05-29
 showLiveChat: false
 ---
+
+import VfTopics from "@/components/VfTopics.astro";
 
 With the [decline of trust in social media advertising](https://viafoura.com/blog/trust-in-facebook-is-at-an-all-time-low-heres-how-media-companies-can-use-that-to-their-advantage/), media organizations are exploring new technologies ⁠— specifically on-site engagement tools that build audiences on their own platforms.
 
@@ -46,7 +48,13 @@ By investing some effort into carefully crafting community guidelines and enforc
 Not sure where to begin? You can find [community guideline-setting best practices here](https://viafoura.com/blog/top-8-best-practices-setting-effective-community-guidelines/).
 
 <div class="viafoura">
-  <vf-content-recirculation title="Trending Conversations" limit="5" days-published="1" trend-window="1" sort="comments"></vf-content-recirculation>
+  <vf-content-recirculation
+    title="Trending Conversations"
+    limit="5"
+    days-published="1"
+    trend-window="1"
+    sort="comments"
+  ></vf-content-recirculation>
 </div>
 
 ### 3\. Perfect Your Conversion Strategy
@@ -82,6 +90,8 @@ You can try rewarding users with special badges that identify them as trusted co
 Once you have your engagement tools, your platform will transform into a place for people to interact with trustworthy content, establish relationships with others and become important community members.
 
 Yet, the most effective on-site engagement tools can’t be left to run on their own. They need to be backed by strategy, community guidelines and actionable insights. Planning, testing and refining your business’ audience engagement process must be a constant effort. That way, your business can evolve as the industry evolves
+
+<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
 
 <div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>

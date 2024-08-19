@@ -29,11 +29,6 @@ const { Content } = await post.render();
   <meta slot="head" property="vf:author" content="viafoura-id:9063500021199" />
   <div class="flex">
     <article class="relative min-w-0">
-      <div>
-        <span class="mr-4 text-sm uppercase text-gray-600 dark:text-gray-300">Media</span><span
-          class="mr-4 text-sm uppercase text-gray-600 dark:text-gray-300">News</span
-        >
-      </div>
       <h1 class="mb-2 mt-3 text-center lg:text-left">
         {post.data.title}
       </h1>
@@ -51,7 +46,7 @@ const { Content } = await post.render();
           <div class="ml-[1px] font-semibold">{post.data.author.name}</div>
           <div class="viafoura">
             <vf-topic-follow
-              topic-id="60055331"
+              topic-id={post.data.author.name.toLowerCase().replace(/ /g, "-")}
               topic-name={post.data.author.name}
               topic-type="author"
               show-count="true"
@@ -60,12 +55,13 @@ const { Content } = await post.render();
         </div>
         <div class="flex items-center sm:pl-4">
           <div class="mr-3 border-b-neutral-300 dark:border-neutral-600 sm:border-l sm:pl-3">
-            <time datetime="2024-08-08"
+            <time datetime={post.data.pubDate.toISOString().split("T")[0]}
               >{
                 post.data.pubDate.toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
+                  timeZone: "UTC",
                 })
               }</time
             >

@@ -2,8 +2,8 @@
 vfContainerId: 101113523
 title: "Viafoura Rams vs OW Officers Gameday: Follow the Action Live!"
 image: "/src/images/vf-rams-vs-ow-officers.jpg"
-author: { name: "Tom Hardington", avatar: "/src/images/TomHardington.jpg" }
-topics: ["Sports"]
+author: { id: 63639064, name: "Tom Hardington", avatar: "/src/images/TomHardington.jpg" }
+topics: [{ id: 72507840, name: "Sports" }]
 excerpt: "Another VF Tigers Gameday is upon us and we're all hoping the Tigers can keep their miracle season going with another win against the 8-6 OW Officers. Follow Live NOW!"
 pubDate: 2022-02-15
 productDemo: "Live Blog - Gameday"

@@ -2,8 +2,8 @@
 vfContainerId: 101113526
 title: "Viafoura Football Club: Live Q&A"
 image: "/src/images/viafoura-fc-live-qa.jpg"
-author: { name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
-topics: ["Sports"]
+author: { id: 60055331, name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
+topics: [{ id: 72507840, name: "Sports" }]
 excerpt: "Viafoura FC manager Mick Lozar is online and taking questions from fans about the team and their trials and tribulations throughout the season. Join now!"
 pubDate: 2022-02-28
 productDemo: "Live Chat - Sports Q&A"

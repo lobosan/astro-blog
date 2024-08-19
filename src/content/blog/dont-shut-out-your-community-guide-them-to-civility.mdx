@@ -2,12 +2,14 @@
 vfContainerId: 400014
 title: "Don't shut out your community, instead guide them towards civility"
 image: "/src/images/dont-shut-out-your-community.jpg"
-author: { name: "Tom Hardington", avatar: "/src/images/TomHardington.jpg" }
-topics: ["Politics", "News"]
+author: { id: 63639064, name: "Tom Hardington", avatar: "/src/images/TomHardington.jpg" }
+topics: [{ id: 72507842, name: "Politics" }, { id: 60055332, name: "News" }]
 excerpt: "It’s a common online mantra that is gaining traction. In fact, over the past year, several major Canadian publications such as the Toronto Star, Sun Media and The National Post have taken this phrase to heart, and made it so you can’t read comments."
 pubDate: 2023-12-15
 showLiveChat: false
 ---
+
+import VfTopics from "@/components/VfTopics.astro";
 
 You've heard it before: ["Don’t Read The Comments](http://www.salon.com/2015/09/11/dont_read_the_comments_the_trolls_racists_and_abusers_won_reasonable_online_feedback_is_a_thing_of_the_distant_past/)["](http://www.salon.com/2015/09/11/dont_read_the_comments_the_trolls_racists_and_abusers_won_reasonable_online_feedback_is_a_thing_of_the_distant_past/)
 
@@ -40,7 +42,13 @@ So how do you ensure the best possible user experience, eliminating the “neve
 - Measure user engagement with [Audience Insights](http://viafoura.com/the-platform/) and go beyond moment based metrics with a focus on attention time.
 
 <div class="viafoura">
-  <vf-content-recirculation title="Trending Conversations" limit="5" days-published="1" trend-window="1" sort="comments"></vf-content-recirculation>
+  <vf-content-recirculation
+    title="Trending Conversations"
+    limit="5"
+    days-published="1"
+    trend-window="1"
+    sort="comments"
+  ></vf-content-recirculation>
 </div>
 
 Viafoura **Social Login** attaches an avatar to a social profile and a human to a comment, which helps to identify and regulate a user within the community.  The anonymity and lack of accountability that comes with onsite user profiles is the very reason why publishers like the Toronto Star are silencing their onsite communities and handing their user engagement to [Facebook](http://viafoura.com/blog/viafoura-displaces-facebook-at-the-times-news/).
@@ -48,6 +56,8 @@ Viafoura **Social Login** attaches an avatar to a social profile and a human t
 [**Automated Moderation**](http://viafoura.com/blog/onlinecommenting/) empowers publishers, journalists and users to engage onsite and on social, 24/7, free from harassment and trolls. SaaM also significantly reduces the costs, resources and headaches required to power manual moderation, while increasing the civility of the online discourse onsite and across your social media channels.
 
 Viafoura [**Audience Insights**](http://viafoura.wpengine.com/the-platform/) measures audience engagement and quantifies the impact of those engagement metrics on key performance indicators such as page views, attention time, reach, loyalty and revenue.
+
+<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
 
 <div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>

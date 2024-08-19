@@ -2,13 +2,15 @@
 vfContainerId: 200014
 title: "How Media Companies Handle COVID-19 Information Overload"
 image: "/src/images/information-overload.jpg"
-author: { name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
-topics: ["Media", "News"]
+author: { id: 60055331, name: "Norman Phillips", avatar: "/src/images/NormanPhillips.jpg" }
+topics: [{ id: 60055334, name: "Media" }, { id: 60055332, name: "News" }]
 excerpt: "With COVID-19 disrupting the world, the demand for news has never been greater. Newsrooms are being pushed to their limits as they test the most time-saving yet effective methods to sift through an infinite amount of coronavirus information, craft story after story and keep their teams safe."
 pubDate: 2022-01-26
 productDemo: "Conversations"
 showLiveChat: false
 ---
+
+import VfTopics from "@/components/VfTopics.astro";
 
 With COVID-19 disrupting the world, the demand for news has never been greater. Newsrooms are being pushed to their limits as they test the most time-saving yet effective methods to sift through an infinite amount of coronavirus information, craft story after story and keep their teams safe.
 
@@ -45,7 +47,13 @@ To provide readers with relevant content and prevent editorial teams from being 
 “The collaboration will allow newsrooms to pick up good information from other sources, so they will not need to re-report the same story,” Bottomly [explains](https://www.niemanlab.org/2020/03/how-journalists-are-working-together-to-cover-the-covid-19-pandemic/). “We can cover more angles this way.”
 
 <div class="viafoura">
-  <vf-content-recirculation title="Trending Conversations" limit="5" days-published="1" trend-window="1" sort="comments"></vf-content-recirculation>
+  <vf-content-recirculation
+    title="Trending Conversations"
+    limit="5"
+    days-published="1"
+    trend-window="1"
+    sort="comments"
+  ></vf-content-recirculation>
 </div>
 
 ## **Simplifying News Updates**
@@ -73,6 +81,8 @@ Many media companies also prevent the spread of misinformation by using credible
 “Lots of misinformation is circulating about coronavirus, and this problem will get worse as the outbreak does,” says Helmuth. “Look to infectious-disease and public-health experts for solid information, and be on alert for people trying to sell themselves as experts when they aren’t.”
 
 Coronavirus-related news certainly won’t be slowing down anytime soon. Thankfully, you now have all the knowledge you need to help your newsroom and audience survive this explosion of information.
+
+<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
 
 <div class="viafoura" id="vf-conversations-container">
   <vf-conversations></vf-conversations>
