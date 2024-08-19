@@ -20,13 +20,13 @@
     @apply bg-[#2A262B];
   }
   h1 {
-    @apply text-4xl font-bold text-gray-800 antialiased;
+    @apply text-3xl font-bold text-gray-800 antialiased lg:text-4xl;
   }
   h2 {
-    @apply text-3xl font-bold text-gray-800;
+    @apply text-2xl font-bold text-gray-800 lg:text-3xl;
   }
   h3 {
-    @apply text-2xl font-semibold text-gray-800;
+    @apply text-xl font-semibold text-gray-800 lg:text-2xl;
   }
   h1,
   h2,
@@ -119,16 +119,22 @@ header .viafoura .vf-tray-trigger:focus {
 .vf-topic-follow-button {
   border-color: #ccc !important;
   background-color: #fafafa !important;
-  color: #181818 !important;
-  font-size: 12px !important;
+  color: #666 !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
   min-width: 75px !important;
-  height: 32px !important;
+  height: 20px !important;
+  padding: 0px !important;
 }
 .vf-topic-unfollow-button {
-  font-size: 12px !important;
-  min-width: 100px !important;
-  height: 32px !important;
-  line-height: -1px !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  min-width: 90px !important;
+  height: 20px !important;
+  padding: 0px !important;
+}
+.count-text {
+  margin-left: 0 !important;
 }
 
 /* Viafoura Dark Mode Styles */

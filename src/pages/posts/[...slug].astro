@@ -28,7 +28,7 @@ const { Content } = await post.render();
   <meta slot="head" property="vf:author" content="viafoura-id:1472900021555" />
   <meta slot="head" property="vf:author" content="viafoura-id:9063500021199" />
   <div class="flex">
-    <article class="relative min-w-0">
+    <article class="relative mx-auto max-w-[780px] overflow-hidden">
       <h1 class="mb-2 mt-3 text-center lg:text-left">
         {post.data.title}
       </h1>
@@ -43,7 +43,7 @@ const { Content } = await post.render();
             format="avif"
             loading="eager"
           />
-          <div class="ml-[1px] font-semibold">{post.data.author.name}</div>
+          <div class="ml-[1px] text-sm font-semibold text-gray-500">{post.data.author.name}</div>
           <div class="viafoura">
             <vf-topic-follow
               topic-id={post.data.author.id}
