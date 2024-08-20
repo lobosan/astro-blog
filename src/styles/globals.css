@@ -49,6 +49,9 @@ header .viafoura .vf-tray-trigger:focus {
 }
 
 /* Viafoura Identifiers */
+#vf-skeleton-container {
+  margin: 0 !important;
+}
 #vf-content-recirculation-container {
   min-height: 338.84px !important;
 }
