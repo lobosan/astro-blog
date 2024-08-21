@@ -34,24 +34,16 @@ const site = {
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script async src="https://cdn.debugbear.com/3zNN3ZoE7Ljy.js" is:inline></script>
     <script is:inline>
-      function applyTheme() {
-        const savedTheme = localStorage.getItem("darkMode");
-        const systemDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (savedTheme === "true" || (savedTheme === null && systemDarkMode)) {
-          document.documentElement.classList.add("dark");
-        }
-      }
-      applyTheme();
+      const isDarkMode = localStorage.getItem("darkMode") === "true";
+      if (isDarkMode) document.documentElement.classList.add("dark");
       document.addEventListener("DOMContentLoaded", () => {
         const themeToggle = document.getElementById("theme-toggle");
         const html = document.documentElement;
-
         const toggleDarkMode = () => {
           html.classList.toggle("dark");
           const isDark = html.classList.contains("dark");
           localStorage.setItem("darkMode", isDark.toString());
         };
-
         themeToggle?.addEventListener("click", toggleDarkMode);
       });
     </script>
