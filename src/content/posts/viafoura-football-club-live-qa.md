@@ -14,7 +14,7 @@ Viafoura FC manager Mick Lozar is online and taking questions from fans about th
 
 ## Join the Live Chat
 
-<div class="viafoura" id="livechat-wrapper" style="height: 550px;">
+<div class="viafoura not-prose" id="livechat-wrapper" style="height: 550px;">
   <vf-livechat></vf-livechat>
 </div>
 

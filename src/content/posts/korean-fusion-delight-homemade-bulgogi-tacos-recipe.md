@@ -96,6 +96,6 @@ Bulgogi, the savory and sweet Korean marinated beef, takes on a new and deliciou
 
 These Korean-inspired Bulgogi Tacos are a perfect blend of sweet, savory, and umami, making them a delightful addition to your taco repertoire. Enjoy the fusion of culinary worlds in the comfort of your own home!
 
-<div class="viafoura">
+<div class="viafoura not-prose">
   <vf-livereviews></vf-livereviews>
 </div>

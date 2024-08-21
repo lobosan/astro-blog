@@ -12,6 +12,6 @@ showLiveChat: true
 
 Follow our live coverage for awards for film and American television productions of 2023.
 
-<div class="viafoura">
+<div class="viafoura not-prose">
   <vf-live-blog></vf-live-blog>
 </div>

@@ -12,6 +12,6 @@ showLiveChat: true
 
 Another VF Tigers Gameday is upon us and we're all hoping the Tigers can keep their miracle season going with another win against the 8-6 OW Officers. Our sports columnist Tom Hardington will be live blogging throughout the game, so follow along with him and all fans.
 
-<div class="viafoura">
+<div class="viafoura not-prose">
   <vf-live-blog></vf-live-blog>
 </div>

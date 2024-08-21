@@ -7,23 +7,21 @@ interface Props {
 const { topics } = Astro.props;
 ---
 
-<div class="mb-9 mt-6 border-b border-t border-stone-200 py-5 dark:border-neutral-600">
+<div class="mb-10 mt-6 border-b border-t border-stone-200 py-5 dark:border-neutral-600">
   <h4 class="mb-3 mt-0">Article Topics</h4>
   <div class="flex gap-6">
     {
       topics.map(topic => (
         <div class="flex items-center">
-          <div class="mr-2 font-semibold text-neutral-600">{topic.name}</div>
-          <div class="not-prose">
-            <div class="viafoura">
-              <vf-topic-follow
-                topic-id={topic.id}
-                topic-name={topic.name}
-                topic-type="topic"
-                show-count="false"
-                minimum-count="5"
-              />
-            </div>
+          <div class="mr-2 text-sm font-semibold text-gray-500">{topic.name}</div>
+          <div class="viafoura not-prose">
+            <vf-topic-follow
+              topic-id={topic.id}
+              topic-name={topic.name}
+              topic-type="topic"
+              show-count="false"
+              minimum-count="5"
+            />
           </div>
         </div>
       ))

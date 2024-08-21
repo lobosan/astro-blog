@@ -120,14 +120,18 @@ header .viafoura .vf-tray-trigger:focus {
   align-items: center !important;
 }
 .vf-topic-follow-button {
-  border-color: #ccc !important;
-  background-color: #fafafa !important;
+  border-color: #e5e5e5 !important;
+  background-color: #fff !important;
   color: #666 !important;
   font-size: 10px !important;
   font-weight: 400 !important;
   min-width: 75px !important;
   height: 20px !important;
   padding: 0px !important;
+}
+.vf-topic-follow-button:hover {
+  border-color: #007fff !important;
+  color: #0074e8 !important;
 }
 .vf-topic-unfollow-button {
   font-size: 10px !important;
