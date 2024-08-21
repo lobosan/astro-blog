@@ -149,6 +149,7 @@ header .viafoura .vf-tray-trigger:focus {
   --text-on-accent-color: #fff !important;
   --default-color: #434343;
   --primary-color-20: #434343;
+  --primary-color-15: #434343;
   --primary-color-10: #434343;
   --accent-color-light: #2792fe !important;
   --accent-color: #1d8eff !important;
@@ -170,7 +171,7 @@ header .viafoura .vf-tray-trigger:focus {
   color: #fff !important;
 }
 .dark .viafoura .vf-livechat__header {
-  @apply border-neutral-600 !important;
+  border-color: #525252 !important;
 }
 .dark .viafoura .vf-tray {
   color: #fff !important;
