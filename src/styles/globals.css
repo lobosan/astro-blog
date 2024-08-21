@@ -186,9 +186,13 @@ header .viafoura .vf-tray-trigger:focus {
   color: #fff !important;
 }
 .dark .vf-topic-follow-button {
-  background-color: #1d8eff !important;
-  border-color: #007fff !important;
+  background-color: #2b262b !important;
+  border-color: #434343 !important;
   color: #fff !important;
+}
+.dark .vf-topic-follow-button:hover {
+  border-color: #2792fe !important;
+  color: #1d8eff !important;
 }
 .dark .vf-tabbed-nav__tabs .vf-active .vf-nav-label,
 .dark .viafoura .vf-nav-button:hover .vf-nav-label,
