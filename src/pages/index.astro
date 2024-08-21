@@ -17,7 +17,7 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
       <article>
         <a href={`posts/${postHero.slug}`}>
           <Image
-            class="mb-6 mt-8 aspect-video w-full rounded-md object-cover shadow-2xl"
+            class="mb-6 aspect-video w-full rounded-md object-cover shadow-2xl"
             src={postHero.data.image}
             alt={postHero.data.title}
             width={1112}

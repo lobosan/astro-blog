@@ -28,11 +28,11 @@ const { Content } = await post.render();
   <meta slot="head" property="vf:author" content="viafoura-id:1472900021555" />
   <meta slot="head" property="vf:author" content="viafoura-id:9063500021199" />
   <div class="flex gap-8">
-    <article class="relative mx-auto max-w-[780px] overflow-hidden">
-      <h1 class="mb-2 mt-3 text-center lg:text-left">
+    <article class="mx-auto max-w-[780px] overflow-hidden lg:w-[calc(100%-332px)]">
+      <h1 class="text-center lg:text-left">
         {post.data.title}
       </h1>
-      <div class="my-7">
+      <div class="my-6">
         <div class="flex items-center gap-3">
           <Image
             class="aspect-square h-12 w-12 rounded-full"
@@ -74,7 +74,7 @@ const { Content } = await post.render();
         </div>
       </div>
       <Image
-        class="mb-7 aspect-video w-full rounded-md object-cover shadow-lg"
+        class="mb-6 aspect-video w-full rounded-md object-cover shadow-lg"
         src={post.data.image}
         alt={post.data.title}
         width={780}
