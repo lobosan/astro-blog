@@ -1,11 +1,10 @@
 ---
+import Aside from "@components/Aside.astro";
+import VfConversationsCount from "@components/VfConversationsCount.astro";
+import VfShareBar from "@components/VfShareBar.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
-
-import Aside from "@/components/Aside.astro";
-import VfConversationsCount from "@/components/VfConversationsCount.astro";
-import VfShareBar from "@/components/VfShareBar.astro";
-import Layout from "@/Layout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -21,7 +20,7 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title}>
+<MainLayout title={post.data.title}>
   <meta slot="head" name="vf:container_id" content={post.data.vfContainerId.toString()} />
   <meta slot="head" property="vf:author" content="viafoura-id:6157500021214" />
   <meta slot="head" property="vf:author" content="viafoura-id:8892700021086" />
@@ -91,4 +90,4 @@ const { Content } = await post.render();
     </article>
     <Aside />
   </div>
-</Layout>
+</MainLayout>

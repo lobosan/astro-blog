@@ -1,9 +1,8 @@
 ---
+import VfConversationsCount from "@components/VfConversationsCount.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
-
-import VfConversationsCount from "@/components/VfConversationsCount.astro";
-import Layout from "@/Layout.astro";
 
 const posts = await getCollection("posts");
 const heroSlug = "how-media-companies-handle-covid-19-information-overload";
@@ -11,7 +10,7 @@ const postHero = posts.find((post: CollectionEntry<"posts">) => post.slug === he
 const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== heroSlug);
 ---
 
-<Layout title="Viafoura Demo">
+<MainLayout title="Viafoura Demo">
   {
     postHero && (
       <article>
@@ -89,4 +88,4 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
       }
     </div>
   </section>
-</Layout>
+</MainLayout>

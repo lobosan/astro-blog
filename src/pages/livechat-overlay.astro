@@ -1,11 +1,11 @@
 ---
-import VfLivechatOverlayDesktop from "@/components/VfLiveChatOverlayDesktop.astro";
-import VfLivechatOverlayMobile from "@/components/VfLiveChatOverlayMobile.astro";
-import VfLivechatOverlayTablet from "@/components/VfLiveChatOverlayTablet.astro";
-import Layout from "@/Layout.astro";
+import VfLivechatOverlayDesktop from "@components/VfLiveChatOverlayDesktop.astro";
+import VfLivechatOverlayMobile from "@components/VfLiveChatOverlayMobile.astro";
+import VfLivechatOverlayTablet from "@components/VfLiveChatOverlayTablet.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<Layout title="NBA Live Chat">
+<MainLayout title="NBA Live Chat">
   <h1 class="mb-6 text-center">NBA Live Chat</h1>
   <div class="relative">
     <div class="lg:flex">
@@ -21,7 +21,7 @@ import Layout from "@/Layout.astro";
     </div>
     <VfLivechatOverlayMobile />
   </div>
-</Layout>
+</MainLayout>
 
 <style is:global>
   #vf-skeleton-container {
