@@ -148,9 +148,10 @@ header .viafoura .vf-tray-trigger:focus {
   --secondary-text-color: #fff !important;
   --text-on-accent-color: #fff !important;
   --default-color: #434343;
-  --primary-color-20: #434343;
-  --primary-color-15: #434343;
   --primary-color-10: #434343;
+  --primary-color-15: #434343;
+  --primary-color-20: #434343;
+  --primary-color-30: #434343;
   --accent-color-light: #2792fe !important;
   --accent-color: #1d8eff !important;
   --accent-color-dark: #007fff !important;
