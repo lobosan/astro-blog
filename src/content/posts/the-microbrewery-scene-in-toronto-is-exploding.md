@@ -6,10 +6,8 @@ author: { id: 87820884, name: "Lindsay Singleton", avatar: "/src/images/LindsayS
 topics: [{ id: 84596441, name: "Travel" }]
 excerpt: "Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats."
 pubDate: 2022-08-01
-showLiveChat: false
+vfConversations: true
 ---
-
-import VfTopics from "@components/VfTopics.astro";
 
 Microbreweries have been popping up all over Toronto and people can't get enough. They offer a wonderful atmosphere as well as refreshing beer and great eats. If you haven't visited a microbrewery in Toronto yet, what are you waiting for? Most areas of the city offer a number of different options, and we've compiled some of our favourties below:
 
@@ -48,9 +46,3 @@ Inspired by German beer gardens, and situated in Dundas West, this brewery featu
 </div>
 
 The breweries listed above just begin to scratch the surface for what Toronto has to offer. There are dozens of other places to check out that will quench your thirst, regardless of what type of beer you prefer. Get out there and explore!
-
-<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
-
-<div class="viafoura not-prose" id="vf-conversations-container" style="min-height: 800px">
-  <vf-conversations></vf-conversations>
-</div>

@@ -2,6 +2,7 @@
 import Aside from "@components/Aside.astro";
 import VfConversationsCount from "@components/VfConversationsCount.astro";
 import VfShareBar from "@components/VfShareBar.astro";
+import VfTopics from "@components/VfTopics.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
@@ -66,7 +67,7 @@ const { Content } = await post.render();
             }</time
           >
           {
-            post.body.includes("vf-conversations") && (
+            post.data.vfConversations && (
               <VfConversationsCount vfContainerId={post.data.vfContainerId} />
             )
           }
@@ -87,6 +88,16 @@ const { Content } = await post.render();
       <div class="prose-black prose max-w-[780px] dark:prose-invert">
         <Content />
       </div>
+      {
+        post.data.vfConversations && (
+          <>
+            <VfTopics topics={post.data.topics} />
+            <div class="viafoura" id="vf-conversations-container" style="min-height: 800px">
+              <vf-conversations />
+            </div>
+          </>
+        )
+      }
     </article>
     <Aside />
   </div>

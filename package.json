@@ -9,11 +9,10 @@
     "format": "prettier -w . && eslint --fix ."
   },
   "dependencies": {
-    "astro": "^4.14.3"
+    "astro": "^4.14.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.4",
     "@astrojs/tailwind": "^5.1.0",
     "@eslint/js": "^9.9.0",
     "@tailwindcss/forms": "^0.5.7",

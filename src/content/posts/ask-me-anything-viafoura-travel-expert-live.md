@@ -7,17 +7,9 @@ topics: [{ id: 84596441, name: "Travel" }]
 excerpt: "Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Join the conversation now!"
 pubDate: 2023-04-09
 productDemo: "Conversations - Ask Me Anything"
-showLiveChat: false
+vfConversations: true
 ---
-
-import VfTopics from "@components/VfTopics.astro";
 
 Viafoura's Travel Correspondent Lindsay Singleton takes any and all travel related questions. Whether it's questions about travelling during and after the pandemic, top places to visit on a budget or anything else travel related, Lindsay is waiting to answer.
 
 Simply post a message in the Conversations area below and Lindsday will reply to you asap. Please try to keep the questions specific to all things travel.
-
-<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
-
-<div class="viafoura not-prose" id="vf-conversations-container" style="min-height: 800px">
-  <vf-conversations></vf-conversations>
-</div>

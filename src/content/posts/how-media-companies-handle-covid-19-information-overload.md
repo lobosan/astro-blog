@@ -7,10 +7,8 @@ topics: [{ id: 60055334, name: "Media" }, { id: 60055332, name: "News" }]
 excerpt: "With COVID-19 disrupting the world, the demand for news has never been greater. Newsrooms are being pushed to their limits as they test the most time-saving yet effective methods to sift through an infinite amount of coronavirus information, craft story after story and keep their teams safe."
 pubDate: 2022-01-26
 productDemo: "Conversations"
-showLiveChat: false
+vfConversations: true
 ---
-
-import VfTopics from "@components/VfTopics.astro";
 
 With COVID-19 disrupting the world, the demand for news has never been greater. Newsrooms are being pushed to their limits as they test the most time-saving yet effective methods to sift through an infinite amount of coronavirus information, craft story after story and keep their teams safe.
 
@@ -81,9 +79,3 @@ Many media companies also prevent the spread of misinformation by using credible
 “Lots of misinformation is circulating about coronavirus, and this problem will get worse as the outbreak does,” says Helmuth. “Look to infectious-disease and public-health experts for solid information, and be on alert for people trying to sell themselves as experts when they aren't.”
 
 Coronavirus-related news certainly won't be slowing down anytime soon. Thankfully, you now have all the knowledge you need to help your newsroom and audience survive this explosion of information.
-
-<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
-
-<div class="viafoura not-prose" id="vf-conversations-container" style="min-height: 800px">
-  <vf-conversations></vf-conversations>
-</div>

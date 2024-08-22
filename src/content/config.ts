@@ -12,6 +12,7 @@ const posts = defineCollection({
       topics: z.array(z.object({ id: z.number(), name: z.string() })),
       pubDate: z.date(),
       productDemo: z.string().optional(),
+      vfConversations: z.boolean().optional(),
     }),
 });
 

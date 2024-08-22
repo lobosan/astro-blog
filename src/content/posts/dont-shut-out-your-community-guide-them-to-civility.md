@@ -6,10 +6,8 @@ author: { id: 63639064, name: "Tom Hardington", avatar: "/src/images/TomHardingt
 topics: [{ id: 72507842, name: "Politics" }, { id: 60055332, name: "News" }]
 excerpt: "It's a common online mantra that is gaining traction. In fact, over the past year, several major Canadian publications such as the Toronto Star, Sun Media and The National Post have taken this phrase to heart, and made it so you can't read comments."
 pubDate: 2023-12-15
-showLiveChat: false
+vfConversations: true
 ---
-
-import VfTopics from "@components/VfTopics.astro";
 
 You've heard it before: ["Don't Read The Comments](http://www.salon.com/2015/09/11/dont_read_the_comments_the_trolls_racists_and_abusers_won_reasonable_online_feedback_is_a_thing_of_the_distant_past/)["](http://www.salon.com/2015/09/11/dont_read_the_comments_the_trolls_racists_and_abusers_won_reasonable_online_feedback_is_a_thing_of_the_distant_past/)
 
@@ -56,9 +54,3 @@ Viafoura **Social Login** attaches an avatar to a social profile and a human to 
 [**Automated Moderation**](http://viafoura.com/blog/onlinecommenting/) empowers publishers, journalists and users to engage onsite and on social, 24/7, free from harassment and trolls. SaaM also significantly reduces the costs, resources and headaches required to power manual moderation, while increasing the civility of the online discourse onsite and across your social media channels.
 
 Viafoura [**Audience Insights**](http://viafoura.wpengine.com/the-platform/) measures audience engagement and quantifies the impact of those engagement metrics on key performance indicators such as page views, attention time, reach, loyalty and revenue.
-
-<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
-
-<div class="viafoura not-prose" id="vf-conversations-container" style="min-height: 800px">
-  <vf-conversations></vf-conversations>
-</div>

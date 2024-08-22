@@ -6,10 +6,8 @@ author: { id: 60055331, name: "Norman Phillips", avatar: "/src/images/NormanPhil
 topics: [{ id: 60055334, name: "Media" }, { id: 60055332, name: "News" }]
 excerpt: "With the decline of trust in social media advertising, media organizations are exploring new technologies, specifically on-site engagement tools that build audiences on their own platforms."
 pubDate: 2024-05-29
-showLiveChat: false
+vfConversations: true
 ---
-
-import VfTopics from "@components/VfTopics.astro";
 
 With the [decline of trust in social media advertising](https://viafoura.com/blog/trust-in-facebook-is-at-an-all-time-low-heres-how-media-companies-can-use-that-to-their-advantage/), media organizations are exploring new technologies ⁠— specifically on-site engagement tools that build audiences on their own platforms.
 
@@ -90,9 +88,3 @@ You can try rewarding users with special badges that identify them as trusted co
 Once you have your engagement tools, your platform will transform into a place for people to interact with trustworthy content, establish relationships with others and become important community members.
 
 Yet, the most effective on-site engagement tools can't be left to run on their own. They need to be backed by strategy, community guidelines and actionable insights. Planning, testing and refining your business' audience engagement process must be a constant effort. That way, your business can evolve as the industry evolves
-
-<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
-
-<div class="viafoura not-prose" id="vf-conversations-container" style="min-height: 800px">
-  <vf-conversations></vf-conversations>
-</div>

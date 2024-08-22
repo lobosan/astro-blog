@@ -63,27 +63,6 @@ header .viafoura .vf-tray-trigger:focus {
   scroll-margin-top: 75px;
 }
 
-/* Custom Identifiers */
-#vf-broadcast-notification {
-  @apply mb-4 mt-6 rounded border-[1px] border-stone-200 bg-white px-8 pb-8 pt-6 shadow-lg;
-}
-#vf-broadcast-notification label {
-  @apply text-sm font-semibold text-stone-600;
-}
-#vf-broadcast-notification input,
-#vf-broadcast-notification select,
-#vf-broadcast-notification textarea {
-  @apply mb-4 mt-1 w-full rounded border-stone-300 text-sm text-stone-600 focus:ring-stone-400;
-}
-#vf-broadcast-notification button {
-  @apply m-auto mb-2 mt-4 flex rounded bg-indigo-500 px-6 py-4 text-base text-white hover:bg-indigo-600 disabled:bg-indigo-300;
-}
-
-/* Custom Classes */
-.sales-menu-link {
-  @apply block cursor-pointer rounded px-3 py-2 font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-neutral-700;
-}
-
 /* Viafoura Classes */
 .viafoura {
   --primary-font: "Inter Variable", system-ui, sans-serif;

@@ -6,10 +6,8 @@ author: { id: 63639064, name: "Tom Hardington", avatar: "/src/images/TomHardingt
 topics: [{ id: 72507842, name: "Politics" }, { id: 60055332, name: "News" }]
 excerpt: "Boris Johnson's Brexit will hinder monetary development to the tune of £1,200 for each individual in the nation, the administration's spending guard dog has said."
 pubDate: 2022-03-06
-showLiveChat: false
+vfConversations: true
 ---
-
-import VfTopics from "@components/VfTopics.astro";
 
 Boris Johnson's Brexit will hinder monetary development to the tune of £1,200 for each individual in the nation, the administration's spending guard dog has said.
 
@@ -38,9 +36,3 @@ The OBR's view reflects lower net immigration, and also weak productivity growth
 “Real business investment has barely grown since the referendum, whereas our March 2016 forecast assumed it would have risen more than 20% by now,” the OBR said. While investment may rebound once there's more Brexit clarity, higher trade barriers will continue to weigh on the economy's capacity to grow.
 
 Bank of England Governor Mark Carney has referred to this as the economy's “speed limit,” which he says has fallen in recent years. The BOE is even more gloomy on potential growth, partly because of a downbeat view of productivity.
-
-<VfTopics author={frontmatter.author} topics={frontmatter.topics} />
-
-<div class="viafoura not-prose" id="vf-conversations-container" style="min-height: 800px">
-  <vf-conversations></vf-conversations>
-</div>
