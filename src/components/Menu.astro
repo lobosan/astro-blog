@@ -1,13 +1,19 @@
 ---
 import { getCollection } from "astro:content";
 
-const posts = await getCollection("posts");
+const getProductDemoPosts = async () => {
+  const posts = await getCollection("posts");
+  return posts
+    .filter(post => post.data.productDemo)
+    .sort((a, b) => (a.data.productDemo ?? "").localeCompare(b.data.productDemo ?? ""));
+};
+const productDemoPosts = await getProductDemoPosts();
 ---
 
 <div class="relative h-8">
   <button
     id="toggle-menu"
-    title="Menu"
+    title="Toggle Menu"
     aria-expanded="false"
     aria-controls="menu"
     class="relative h-8 w-8"
@@ -31,6 +37,7 @@ const posts = await getCollection("posts");
   </button>
   <div
     id="menu"
+    role="menu"
     class="absolute left-0 z-20 hidden w-80 rounded border bg-white p-3 pb-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-800"
   >
     <div class="mb-2 flex items-center justify-between">
@@ -38,18 +45,23 @@ const posts = await getCollection("posts");
     </div>
     <nav>
       {
-        posts
-          .filter(post => post.data.productDemo)
-          .sort((a, b) => (a.data.productDemo ?? "").localeCompare(b.data.productDemo ?? ""))
-          .map(post => (
-            <a href={`/posts/${post.slug}`} title={post.data.productDemo} class="sales-menu-link">
-              {post.data.productDemo}
-            </a>
-          ))
+        [
+          ...productDemoPosts.map(post => ({
+            href: `/posts/${post.slug}`,
+            text: post.data.productDemo,
+          })),
+          { href: "/livechat-overlay", text: "Live Chat - Overlay" },
+        ].map(({ href, text }) => (
+          <a
+            {href}
+            title={text}
+            role="menuitem"
+            class="dark:hover:bg-neutral-700; block cursor-pointer rounded px-3 py-2 font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-neutral-700"
+          >
+            {text}
+          </a>
+        ))
       }
-      <a href="/livechat-overlay" title="Live Chat - Overlay" class="sales-menu-link">
-        Live Chat - Overlay
-      </a>
     </nav>
   </div>
 </div>
@@ -77,9 +89,3 @@ const posts = await getCollection("posts");
     });
   }
 </script>
-
-<style>
-  .sales-menu-link {
-    @apply block cursor-pointer rounded px-3 py-2 font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-neutral-700;
-  }
-</style>
