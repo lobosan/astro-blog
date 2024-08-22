@@ -4,10 +4,17 @@ import { getCollection } from "astro:content";
 const getProductDemoPosts = async () => {
   const posts = await getCollection("posts");
   return posts
-    .filter(post => post.data.productDemo)
+    .filter(({ data }) => data.productDemo)
     .sort((a, b) => (a.data.productDemo ?? "").localeCompare(b.data.productDemo ?? ""));
 };
 const productDemoPosts = await getProductDemoPosts();
+const menuItems = [
+  ...productDemoPosts.map(({ slug, data }) => ({
+    href: `/posts/${slug}`,
+    text: data.productDemo,
+  })),
+  { href: "/livechat-overlay", text: "Live Chat - Overlay" },
+];
 ---
 
 <div class="relative h-8">
@@ -45,13 +52,7 @@ const productDemoPosts = await getProductDemoPosts();
     </div>
     <nav>
       {
-        [
-          ...productDemoPosts.map(post => ({
-            href: `/posts/${post.slug}`,
-            text: post.data.productDemo,
-          })),
-          { href: "/livechat-overlay", text: "Live Chat - Overlay" },
-        ].map(({ href, text }) => (
+        menuItems.map(({ href, text }) => (
           <a
             {href}
             title={text}
