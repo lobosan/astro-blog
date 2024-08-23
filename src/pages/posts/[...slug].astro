@@ -88,17 +88,17 @@ const { Content } = await post.render();
       <div class="prose-black prose max-w-[780px] dark:prose-invert">
         <Content />
       </div>
-      {
-        post.data.vfConversations && (
-          <>
-            <VfTopics topics={post.data.topics} />
-            <div class="viafoura" id="vf-conversations-container" style="min-height: 800px">
-              <vf-conversations />
-            </div>
-          </>
-        )
-      }
     </article>
+    {
+      post.data.vfConversations && (
+        <>
+          <VfTopics topics={post.data.topics} />
+          <div class="viafoura" id="vf-conversations-container" style="min-height: 800px">
+            <vf-conversations />
+          </div>
+        </>
+      )
+    }
     <Aside />
   </div>
 </MainLayout>
