@@ -28,12 +28,8 @@ export default [
     languageOptions: { parser: typescriptParser },
     rules: {
       "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/triple-slash-reference": "off",
-      "@typescript-eslint/no-non-null-assertion": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_", destructuredArrayIgnorePattern: "^_" },
-      ],
     },
   },
   {
@@ -42,17 +38,9 @@ export default [
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
-          groups: [
-            ["builtin", "external"],
-            ["internal", "parent", "sibling", "index"],
-          ],
-        },
-      ],
+      "import/first": "error",
+      "import/no-duplicates": "error",
+      "import/newline-after-import": "error",
     },
   },
   {
