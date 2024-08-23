@@ -39,7 +39,7 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
             </p>
             <div class="w-50 flex text-sm font-semibold text-gray-500">
               {postHero.data.author.name}
-              {postHero.body.includes("vf-conversations") && (
+              {postHero.data.vfConversations && (
                 <VfConversationsCount
                   slug={postHero.slug}
                   vfContainerId={postHero.data.vfContainerId}
@@ -55,7 +55,7 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
     <h2 class="mb-6 flex items-center">More Stories</h2>
     <div class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
       {
-        postList.map(({ slug, data, body }: CollectionEntry<"posts">) => (
+        postList.map(({ slug, data }: CollectionEntry<"posts">) => (
           <article>
             <a href={`/posts/${slug}`}>
               <Image
@@ -78,7 +78,7 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
             <div class="w-50">
               <div class="flex text-sm font-semibold text-gray-500">
                 {data.author.name}
-                {body.includes("vf-conversations") && (
+                {data.vfConversations && (
                   <VfConversationsCount vfContainerId={data.vfContainerId} slug={slug} />
                 )}
               </div>
