@@ -14,7 +14,7 @@ The COVID-19 pandemic has created an unprecedented demand for news, pushing even
 
 Media companies face the dual challenge of keeping up with the rapidly evolving situation while ensuring the accuracy and relevance of their reporting. This information overload not only strains resources but also increases the risk of burnout among journalists and confusion among the public.
 
-<div class="viafoura not-prose">
+<div class="viafoura not-prose h-[587px] min-[621px]:h-[288px]">
   <vf-conversation-starter target="vf-conversations-container"></vf-conversation-starter>
 </div>
 
@@ -32,7 +32,7 @@ To prevent burnout and ensure comprehensive coverage, some U.S. media organizati
 
 Traditional articles often become outdated quickly. Live blogging tools allow journalists to post instant updates, reducing workload and providing readers with real-time information.
 
-<div class="viafoura not-prose">
+<div class="viafoura not-prose h-[635px] min-[780px]:h-[351px]" style="min-height: 351px">
   <vf-content-recirculation
     title="Trending Conversations"
     limit="5"
