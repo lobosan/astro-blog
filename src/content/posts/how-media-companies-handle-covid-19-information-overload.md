@@ -14,15 +14,15 @@ The COVID-19 pandemic has created an unprecedented demand for news, pushing even
 
 Media companies face the dual challenge of keeping up with the rapidly evolving situation while ensuring the accuracy and relevance of their reporting. This information overload not only strains resources but also increases the risk of burnout among journalists and confusion among the public.
 
-<div class="viafoura not-prose">
-  <vf-conversation-starter target="vf-conversations-container"></vf-conversation-starter>
-</div>
-
 In response, newsrooms around the world have been forced to adapt quickly, developing innovative strategies to manage the flood of information effectively. This article explores some of the key approaches media companies are using to navigate these challenging times while maintaining the quality and integrity of their reporting.
 
 ## Reallocating Staff
 
 Many media companies are shifting their entire workforce to focus on coronavirus coverage. The Seattle Times, for example, has redirected almost all 58 of its reporters to prioritize COVID-19 stories.
+
+<div class="viafoura not-prose">
+  <vf-conversation-starter target="vf-conversations-container"></vf-conversation-starter>
+</div>
 
 ## Collaborating with Competitors
 
@@ -31,16 +31,6 @@ To prevent burnout and ensure comprehensive coverage, some U.S. media organizati
 ## Adopting Live Blogging
 
 Traditional articles often become outdated quickly. Live blogging tools allow journalists to post instant updates, reducing workload and providing readers with real-time information.
-
-<div class="viafoura not-prose">
-  <vf-content-recirculation
-    title="Trending Conversations"
-    limit="5"
-    days-published="1"
-    trend-window="1"
-    sort="comments"
-  ></vf-content-recirculation>
-</div>
 
 ## Combating Misinformation
 
