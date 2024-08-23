@@ -21,7 +21,13 @@ In response, newsrooms around the world have been forced to adapt quickly, devel
 Many media companies are shifting their entire workforce to focus on coronavirus coverage. The Seattle Times, for example, has redirected almost all 58 of its reporters to prioritize COVID-19 stories.
 
 <div class="viafoura not-prose">
-  <vf-conversation-starter target="vf-conversations-container"></vf-conversation-starter>
+  <vf-content-recirculation
+    title="Trending Conversations"
+    limit="5"
+    days-published="1"
+    trend-window="1"
+    sort="comments"
+  ></vf-content-recirculation>
 </div>
 
 ## Collaborating with Competitors
