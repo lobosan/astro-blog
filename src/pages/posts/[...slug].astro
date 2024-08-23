@@ -28,77 +28,77 @@ const { Content } = await post.render();
   <meta slot="head" property="vf:author" content="viafoura-id:1472900021555" />
   <meta slot="head" property="vf:author" content="viafoura-id:9063500021199" />
   <div class="flex gap-8">
-    <article class="mx-auto max-w-[780px] overflow-hidden lg:w-[calc(100%-332px)]">
-      <h1 class="text-center lg:text-left">
-        {post.data.title}
-      </h1>
-      <div class="my-6">
-        <div class="flex items-center gap-3">
-          <Image
-            class="aspect-square h-12 w-12 rounded-full"
-            src={post.data.author.avatar}
-            alt={post.data.author.name}
-            width={200}
-            height={200}
-            format="avif"
-            loading="eager"
-          />
-          <div class="ml-[1px] text-sm font-semibold text-gray-500">{post.data.author.name}</div>
-          <div class="viafoura">
-            <vf-topic-follow
-              topic-id={post.data.author.id}
-              topic-name={post.data.author.name}
-              topic-type="author"
-              show-count="false"
-              minimum-count="5"></vf-topic-follow>
+    <div class="mx-auto max-w-[780px] overflow-hidden">
+      <article>
+        <h1 class="text-center lg:text-left">
+          {post.data.title}
+        </h1>
+        <div class="my-6">
+          <div class="flex items-center gap-3">
+            <Image
+              class="aspect-square h-12 w-12 rounded-full"
+              src={post.data.author.avatar}
+              alt={post.data.author.name}
+              width={200}
+              height={200}
+              format="avif"
+              loading="eager"
+            />
+            <div class="ml-[1px] text-sm font-semibold text-gray-500">{post.data.author.name}</div>
+            <div class="viafoura">
+              <vf-topic-follow
+                topic-id={post.data.author.id}
+                topic-name={post.data.author.name}
+                topic-type="author"
+                show-count="false"
+                minimum-count="5"></vf-topic-follow>
+            </div>
+          </div>
+          <div class="mt-2 flex items-center">
+            <time
+              class="mt-[1px] text-sm font-semibold text-gray-500 dark:text-white"
+              datetime={post.data.pubDate.toISOString().split("T")[0]}
+              >{
+                post.data.pubDate.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  timeZone: "UTC",
+                })
+              }</time
+            >
+            {
+              post.data.vfConversations && (
+                <VfConversationsCount vfContainerId={post.data.vfContainerId} />
+              )
+            }
           </div>
         </div>
-        <div class="mt-2 flex items-center">
-          <time
-            class="mt-[1px] text-sm font-semibold text-gray-500 dark:text-white"
-            datetime={post.data.pubDate.toISOString().split("T")[0]}
-            >{
-              post.data.pubDate.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                timeZone: "UTC",
-              })
-            }</time
-          >
-          {
-            post.data.vfConversations && (
-              <VfConversationsCount vfContainerId={post.data.vfContainerId} />
-            )
-          }
+        <Image
+          class="mb-6 aspect-video w-full rounded-md object-cover shadow-lg"
+          src={post.data.image}
+          alt={post.data.title}
+          width={780}
+          height={439}
+          widths={[640, 1280]}
+          sizes={"100vw, (min-width: 640px) 1280px"}
+          format="avif"
+          loading="eager"
+        />
+        <VfShareBar />
+        <div class="prose-black prose max-w-[780px] dark:prose-invert">
+          <Content />
         </div>
-      </div>
-      <Image
-        class="mb-6 aspect-video w-full rounded-md object-cover shadow-lg"
-        src={post.data.image}
-        alt={post.data.title}
-        width={780}
-        height={439}
-        widths={[640, 1280]}
-        sizes={"100vw, (min-width: 640px) 1280px"}
-        format="avif"
-        loading="eager"
-      />
-      <VfShareBar />
-      <div class="prose-black prose max-w-[780px] dark:prose-invert">
-        <Content />
-      </div>
+        {post.data.vfConversations && <VfTopics topics={post.data.topics} />}
+      </article>
       {
         post.data.vfConversations && (
-          <>
-            <VfTopics topics={post.data.topics} />
-            <div class="viafoura" id="vf-conversations-container" style="min-height: 800px">
-              <vf-conversations />
-            </div>
-          </>
+          <div class="viafoura" id="vf-conversations-container" style="min-height: 600px">
+            <vf-conversations initial-height="600" />
+          </div>
         )
       }
-    </article>
+    </div>
     <Aside />
   </div>
 </MainLayout>
