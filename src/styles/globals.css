@@ -120,7 +120,6 @@ header .viafoura .vf-tray-trigger:focus {
   --dark-text-on-background-color: #fff !important;
   --light-text-on-default-color: #fff !important;
   --dark-text-on-default-color: #fff !important;
-  --dark-text-on-default-color: #fff !important;
   --secondary-text-color: #fff !important;
   --text-on-accent-color: #fff !important;
   --default-color: #434343;
@@ -128,6 +127,7 @@ header .viafoura .vf-tray-trigger:focus {
   --primary-color-15: #434343;
   --primary-color-20: #434343;
   --primary-color-30: #434343;
+  --primary-color-60: #fff;
   --accent-color-light: #2792fe !important;
   --accent-color: #1d8eff !important;
   --accent-color-dark: #007fff !important;
