@@ -7,10 +7,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@content/*": ["src/content/*"],
-      "@images/*": ["src/images/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"]
     }
   }
