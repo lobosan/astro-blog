@@ -1,5 +1,6 @@
 ---
 import Aside from "@components/Aside.astro";
+import SkeletonLoader from "@components/SkeletonLoader.astro";
 import VfConversationsCount from "@components/VfConversationsCount.astro";
 import VfShareBar from "@components/VfShareBar.astro";
 import VfTopics from "@components/VfTopics.astro";
@@ -46,6 +47,7 @@ const { Content } = await post.render();
             />
             <div class="ml-[1px] text-sm font-semibold text-gray-500">{post.data.author.name}</div>
             <div class="viafoura">
+              <SkeletonLoader width="75px" height="20px" />
               <vf-topic-follow
                 topic-id={post.data.author.id}
                 topic-name={post.data.author.name}
@@ -102,6 +104,12 @@ const { Content } = await post.render();
     <Aside />
   </div>
 </MainLayout>
+
+<script>
+  import { observeVfWidgetAndHideSkeletonLoader } from "@utils/observeVfWidgetAndHideSkeletonLoader";
+
+  observeVfWidgetAndHideSkeletonLoader(".vf-topic-follow-button");
+</script>
 
 <style is:global>
   .prose h2 {

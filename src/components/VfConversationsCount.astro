@@ -1,4 +1,6 @@
 ---
+import SkeletonLoader from "@components/SkeletonLoader.astro";
+
 interface Props {
   vfContainerId: number;
   slug?: string;
@@ -27,11 +29,7 @@ const link = slug ? `/posts/${slug}` : "";
       ></path>
     </svg>
     <div class="viafoura">
-      <div
-        class="skeleton-loader relative h-5 w-6 overflow-hidden rounded bg-[#ebebeb] dark:bg-gray-600"
-      >
-        <div class="bg-shimmer animate-shimmer absolute inset-0 bg-no-repeat"></div>
-      </div>
+      <SkeletonLoader width="24px" height="20px" />
       <vf-conversations-count vf-container-id={vfContainerId}></vf-conversations-count>
     </div>
   </a>
