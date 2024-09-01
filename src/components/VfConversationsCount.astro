@@ -36,7 +36,7 @@ const link = slug ? `/posts/${slug}` : "";
 </div>
 
 <script>
-  import { observeVfWidgetAndHideSkeletonLoader } from "@utils/observeVfWidgetAndHideSkeletonLoader";
+  import { observeVfHideSkeleton } from "@utils/observeVfHideSkeleton";
 
-  observeVfWidgetAndHideSkeletonLoader(".vf-comments-count");
+  observeVfHideSkeleton(".vf-comments-count");
 </script>

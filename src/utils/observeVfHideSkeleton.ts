@@ -1,4 +1,4 @@
-export const observeVfWidgetAndHideSkeletonLoader = (targetSelector: string) => {
+export const observeVfHideSkeleton = (targetSelector: string) => {
   const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
       mutation.addedNodes.forEach(node => {

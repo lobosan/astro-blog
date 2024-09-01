@@ -106,9 +106,9 @@ const { Content } = await post.render();
 </MainLayout>
 
 <script>
-  import { observeVfWidgetAndHideSkeletonLoader } from "@utils/observeVfWidgetAndHideSkeletonLoader";
+  import { observeVfHideSkeleton } from "@utils/observeVfHideSkeleton";
 
-  observeVfWidgetAndHideSkeletonLoader(".vf-topic-follow-button");
+  observeVfHideSkeleton(".vf-topic-follow-button");
 </script>
 
 <style is:global>
