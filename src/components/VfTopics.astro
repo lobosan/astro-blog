@@ -12,7 +12,7 @@ const { topics } = Astro.props;
         <div class="flex items-center">
           <div class="mr-2 text-sm font-semibold text-gray-500">{topic.name}</div>
           <div class="viafoura">
-            <SkeletonLoader width="75px" height="20px" />
+            <SkeletonLoader width="w-[75px]" height="h-[20px]" />
             <vf-topic-follow
               topic-id={topic.id}
               topic-name={topic.name}

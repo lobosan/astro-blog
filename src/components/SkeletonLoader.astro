@@ -8,8 +8,7 @@ const { width, height } = Astro.props;
 ---
 
 <div
-  class="skeleton-loader relative overflow-hidden rounded bg-[#ebebeb] dark:bg-gray-600"
-  style={`width: ${width}; height: ${height};`}
+  class={`skeleton-loader relative overflow-hidden rounded bg-[#ebebeb] dark:bg-gray-600 ${width} ${height}`}
 >
   <div class="bg-shimmer animate-shimmer absolute inset-0 bg-no-repeat"></div>
 </div>
