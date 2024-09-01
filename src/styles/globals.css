@@ -99,6 +99,9 @@ header .viafoura .vf-tray-trigger:focus {
 .vf-comments-count {
   @apply text-sm font-semibold text-gray-500 !important;
 }
+.count-text {
+  margin-left: 0 !important;
+}
 .vf-expanding-hover-light::before {
   border-width: 0 0 3px 0 !important;
 }
@@ -106,9 +109,6 @@ header .viafoura .vf-tray-trigger:focus {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
-}
-.vf-check-symbol {
-  display: none !important;
 }
 .vf-topic-follow-button {
   border-color: #e5e5e5 !important;
@@ -123,17 +123,6 @@ header .viafoura .vf-tray-trigger:focus {
 .vf-topic-follow-button:hover {
   border-color: #007fff !important;
   color: #0074e8 !important;
-}
-.vf-topic-unfollow-button:hover .vf-check-symbol + span {
-  visibility: hidden;
-}
-.vf-topic-unfollow-button:hover .vf-check-symbol + span::before {
-  content: "unfollow";
-  visibility: visible;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 87px;
 }
 .vf-topic-unfollow-button {
   background-color: #3d8510 !important;
@@ -150,8 +139,19 @@ header .viafoura .vf-tray-trigger:focus {
   border-color: #752121 !important;
   color: #fff !important;
 }
-.count-text {
-  margin-left: 0 !important;
+.vf-check-symbol {
+  display: none !important;
+}
+.vf-topic-unfollow-button:hover .vf-check-symbol + span {
+  visibility: hidden;
+}
+.vf-topic-unfollow-button:hover .vf-check-symbol + span::before {
+  content: "unfollow";
+  visibility: visible;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 87px;
 }
 
 /* Viafoura Dark Mode Styles */
