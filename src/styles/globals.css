@@ -107,6 +107,9 @@ header .viafoura .vf-tray-trigger:focus {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+.vf-check-symbol {
+  display: none !important;
+}
 .vf-topic-follow-button {
   border-color: #e5e5e5 !important;
   background-color: #fff !important;
@@ -121,12 +124,31 @@ header .viafoura .vf-tray-trigger:focus {
   border-color: #007fff !important;
   color: #0074e8 !important;
 }
+.vf-topic-unfollow-button:hover .vf-check-symbol + span {
+  visibility: hidden;
+}
+.vf-topic-unfollow-button:hover .vf-check-symbol + span::before {
+  content: "unfollow";
+  visibility: visible;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 87px;
+}
 .vf-topic-unfollow-button {
+  background-color: #3d8510 !important;
+  border-color: #3d8510 !important;
+  color: #fff !important;
   font-size: 10px !important;
   font-weight: 400 !important;
-  min-width: 90px !important;
+  min-width: 92px !important;
   height: 20px !important;
   padding: 0px !important;
+}
+.vf-topic-unfollow-button:hover {
+  background-color: #752121 !important;
+  border-color: #752121 !important;
+  color: #fff !important;
 }
 .count-text {
   margin-left: 0 !important;
