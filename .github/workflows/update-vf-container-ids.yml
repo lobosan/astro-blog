@@ -3,6 +3,7 @@ name: Update VfContainerIds of MDX Files with Conversations
 on:
   schedule:
     - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   update-vf-container-ids:
