@@ -18,7 +18,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@biomejs/biome": "1.8.3",
     "@tailwindcss/typography": "^0.5.15",
-    "git-hooks": "^1.1.10",
+    "husky": "^9.1.5",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
   }
