@@ -6,20 +6,30 @@
     "dev": "astro dev",
     "preview": "astro preview",
     "build": "astro check && astro build",
-    "biome": "biome check --unsafe",
-    "prepare": "husky"
+    "format": "prettier -w . && eslint --fix ."
   },
   "dependencies": {
-    "astro": "^4.15.2"
+    "astro": "^4.15.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/mdx": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
-    "@biomejs/biome": "1.8.3",
+    "@eslint/js": "^9.9.1",
     "@tailwindcss/typography": "^0.5.15",
-    "husky": "^9.1.5",
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/parser": "^8.3.0",
+    "astro-eslint-parser": "^1.0.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0"
   }
 }

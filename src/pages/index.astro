@@ -1,13 +1,13 @@
 ---
-import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
 import VfConversationsCount from "@components/VfConversationsCount.astro";
 import MainLayout from "@layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
 const heroSlug = "how-media-companies-handle-covid-19-information-overload";
-const postHero = posts.find((post) => post.slug === heroSlug);
-const postList = posts.filter((post) => post.slug !== heroSlug);
+const postHero = posts.find((post: CollectionEntry<"posts">) => post.slug === heroSlug);
+const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== heroSlug);
 ---
 
 <MainLayout title="Viafoura Demo">
@@ -55,7 +55,7 @@ const postList = posts.filter((post) => post.slug !== heroSlug);
     <h2 class="mb-6 flex items-center">More Stories</h2>
     <div class="grid gap-x-16 gap-y-10 sm:grid-cols-2">
       {
-        postList.map(({ slug, data }) => (
+        postList.map(({ slug, data }: CollectionEntry<"posts">) => (
           <article>
             <a href={`/posts/${slug}`}>
               <Image
