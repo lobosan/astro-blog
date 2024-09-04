@@ -55,6 +55,6 @@ export default [
     },
   },
   {
-    ignores: [".github", "dist", "node_modules"],
+    ignores: [".astro", ".github", "dist", "node_modules"],
   },
 ];
