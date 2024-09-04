@@ -1,5 +1,5 @@
 export const observeVfHideSkeleton = (targetSelector: string) => {
-  const observer = new MutationObserver((mutations) => {
+  const observer = new MutationObserver(mutations => {
     for (const mutation of mutations) {
       for (const node of mutation.addedNodes) {
         if (node instanceof HTMLElement) {
