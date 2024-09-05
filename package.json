@@ -9,6 +9,7 @@
     "format": "prettier -w . && eslint --fix ."
   },
   "dependencies": {
+    "@datadog/browser-rum": "^5.26.0",
     "astro": "^4.15.2"
   },
   "devDependencies": {
