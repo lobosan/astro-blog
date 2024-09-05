@@ -24,7 +24,7 @@ export default [
     languageOptions: {
       parser: astroEslintParser,
       parserOptions: {
-        parser: "@typescript-eslint/parser",
+        parser: typescriptParser,
         extraFileExtensions: [".astro"],
       },
     },
@@ -33,11 +33,6 @@ export default [
     files: ["**/*.{ts,tsx}", "**/*.astro/*.js"],
     languageOptions: {
       parser: typescriptParser,
-    },
-    rules: {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "error",
-      "@typescript-eslint/triple-slash-reference": "off",
     },
   },
   {
@@ -55,6 +50,6 @@ export default [
     },
   },
   {
-    ignores: [".astro", ".github", "dist", "node_modules"],
+    ignores: [".astro/", ".github/", "dist/", "node_modules/"],
   },
 ];
