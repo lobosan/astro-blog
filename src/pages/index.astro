@@ -35,15 +35,13 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
             </a>
           </h1>
           <div>
-            <p class="mb-4 mt-4 text-base text-gray-700 antialiased sm:mt-0">
-              {postHero.data.excerpt}
-            </p>
-            <div class="w-50 flex text-sm font-semibold text-gray-500">
+            <p class="mb-4 mt-4 text-base text-gray-700 sm:mt-0">{postHero.data.excerpt}</p>
+            <div class="flex items-center text-sm font-semibold text-gray-500">
               {postHero.data.author.name}
               {postHero.data.vfConversations && (
                 <VfConversationsCount
-                  slug={postHero.slug}
                   vfContainerId={postHero.data.vfContainerId}
+                  slug={postHero.slug}
                 />
               )}
             </div>
@@ -75,14 +73,12 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
                 {data.title}
               </a>
             </h3>
-            <p class="mb-4 text-base text-gray-700 antialiased">{data.excerpt}</p>
-            <div class="w-50">
-              <div class="flex text-sm font-semibold text-gray-500">
-                {data.author.name}
-                {data.vfConversations && (
-                  <VfConversationsCount vfContainerId={data.vfContainerId} slug={slug} />
-                )}
-              </div>
+            <p class="mb-4 text-base text-gray-700">{data.excerpt}</p>
+            <div class="flex items-center text-sm font-semibold text-gray-500">
+              {data.author.name}
+              {data.vfConversations && (
+                <VfConversationsCount vfContainerId={data.vfContainerId} slug={slug} />
+              )}
             </div>
           </article>
         ))
