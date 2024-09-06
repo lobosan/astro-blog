@@ -46,25 +46,6 @@ const site = {
         themeToggle?.addEventListener("click", toggleDarkMode);
       });
     </script>
-    <script>
-      import { datadogRum } from "@datadog/browser-rum";
-
-      if (import.meta.env.PROD) {
-        datadogRum.init({
-          applicationId: "0d8f0ac7-4f49-4859-88a4-94e8682dfe4b",
-          clientToken: "pub757fdd5a274b2080e402df112a590fef",
-          site: "datadoghq.com",
-          service: "demo-site-astrojs",
-          env: "production",
-          sessionSampleRate: 100,
-          sessionReplaySampleRate: 20,
-          trackUserInteractions: true,
-          trackResources: true,
-          trackLongTasks: true,
-          defaultPrivacyLevel: "mask-user-input",
-        });
-      }
-    </script>
   </head>
   <body>
     <Header />

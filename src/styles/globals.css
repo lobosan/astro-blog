@@ -26,7 +26,7 @@
     @apply text-2xl font-bold text-gray-800 sm:text-3xl;
   }
   h3 {
-    @apply text-xl font-semibold text-gray-800 sm:text-2xl;
+    @apply text-base font-semibold text-gray-800;
   }
   h1,
   h2,
