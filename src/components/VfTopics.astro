@@ -5,7 +5,7 @@ const { topics } = Astro.props;
 ---
 
 <div class="mb-10 mt-6 border-b border-t border-stone-200 py-5 dark:border-neutral-600">
-  <h3 class="mb-3 mt-0 font-semibold dark:text-white">Article Topics</h3>
+  <div class="mb-3 mt-0 font-semibold dark:text-white">Article Topics</div>
   <div class="flex gap-6">
     {
       topics.map((topic: { id: number; name: string }) => (
