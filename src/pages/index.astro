@@ -1,8 +1,9 @@
 ---
-import VfConversationsCount from "@components/VfConversationsCount.astro";
-import MainLayout from "@layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
+
+import VfConversationsCount from "@/components/VfConversationsCount.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 
 const posts = await getCollection("posts");
 const heroSlug = "how-media-companies-handle-covid-19-information-overload";

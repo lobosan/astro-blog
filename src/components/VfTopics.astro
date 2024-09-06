@@ -1,5 +1,5 @@
 ---
-import SkeletonLoader from "@components/SkeletonLoader.astro";
+import SkeletonLoader from "@/components/SkeletonLoader.astro";
 
 const { topics } = Astro.props;
 ---
@@ -28,7 +28,7 @@ const { topics } = Astro.props;
 </div>
 
 <script>
-  import { observeVfHideSkeleton } from "@utils/observeVfHideSkeleton";
+  import { observeVfHideSkeleton } from "@/utils/observeVfHideSkeleton";
 
   observeVfHideSkeleton(".vf-topic-follow-button");
 </script>

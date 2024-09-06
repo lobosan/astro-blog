@@ -4,7 +4,6 @@ import astroEslintParser from "astro-eslint-parser";
 import eslintPluginAstro from "eslint-plugin-astro";
 import importPlugin from "eslint-plugin-import";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
-import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default [
@@ -13,9 +12,12 @@ export default [
   ...eslintPluginAstro.configs.recommended,
   {
     languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
-        ...globals.browser,
-        ...globals.node,
+        node: true,
+        es2022: true,
+        browser: true,
       },
     },
   },
@@ -30,13 +32,13 @@ export default [
     },
   },
   {
-    files: ["**/*.{ts,tsx}", "**/*.astro/*.js"],
+    files: ["**/*.astro/*.js", "*.astro/*.js"],
     languageOptions: {
       parser: typescriptParser,
     },
   },
   {
-    files: ["**/*.{js,jsx,ts,tsx,astro}"],
+    files: ["**/*.{js,ts,astro}"],
     plugins: {
       "simple-import-sort": simpleImportSort,
       import: importPlugin,

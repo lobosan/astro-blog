@@ -1,12 +1,13 @@
 ---
-import Aside from "@components/Aside.astro";
-import SkeletonLoader from "@components/SkeletonLoader.astro";
-import VfConversationsCount from "@components/VfConversationsCount.astro";
-import VfShareBar from "@components/VfShareBar.astro";
-import VfTopics from "@components/VfTopics.astro";
-import MainLayout from "@layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
+
+import Aside from "@/components/Aside.astro";
+import SkeletonLoader from "@/components/SkeletonLoader.astro";
+import VfConversationsCount from "@/components/VfConversationsCount.astro";
+import VfShareBar from "@/components/VfShareBar.astro";
+import VfTopics from "@/components/VfTopics.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -106,7 +107,7 @@ const { Content } = await post.render();
 </MainLayout>
 
 <script>
-  import { observeVfHideSkeleton } from "@utils/observeVfHideSkeleton";
+  import { observeVfHideSkeleton } from "@/utils/observeVfHideSkeleton";
 
   observeVfHideSkeleton(".vf-topic-follow-button");
 </script>

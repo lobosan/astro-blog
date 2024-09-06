@@ -1,5 +1,5 @@
 ---
-import SkeletonLoader from "@components/SkeletonLoader.astro";
+import SkeletonLoader from "@/components/SkeletonLoader.astro";
 
 interface Props {
   vfContainerId: number;
@@ -36,7 +36,7 @@ const link = slug ? `/posts/${slug}` : "";
 </div>
 
 <script>
-  import { observeVfHideSkeleton } from "@utils/observeVfHideSkeleton";
+  import { observeVfHideSkeleton } from "@/utils/observeVfHideSkeleton";
 
   observeVfHideSkeleton(".vf-comments-count");
 </script>
