@@ -39,10 +39,7 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
             <div class="flex items-center text-sm font-semibold text-gray-500">
               {postHero.data.author.name}
               {postHero.data.vfConversations && (
-                <VfConversationsCount
-                  vfContainerId={postHero.data.vfContainerId}
-                  slug={postHero.slug}
-                />
+                <VfConversationsCount vfContainerId={postHero.data.vfContainerId} slug={postHero.slug} />
               )}
             </div>
           </div>
@@ -76,9 +73,7 @@ const postList = posts.filter((post: CollectionEntry<"posts">) => post.slug !== 
             <p class="mb-4 text-base text-gray-700">{data.excerpt}</p>
             <div class="flex items-center text-sm font-semibold text-gray-500">
               {data.author.name}
-              {data.vfConversations && (
-                <VfConversationsCount vfContainerId={data.vfContainerId} slug={slug} />
-              )}
+              {data.vfConversations && <VfConversationsCount vfContainerId={data.vfContainerId} slug={slug} />}
             </div>
           </article>
         ))

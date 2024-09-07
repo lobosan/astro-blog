@@ -68,11 +68,7 @@ const { Content } = await post.render();
                 })
               }</time
             >
-            {
-              post.data.vfConversations && (
-                <VfConversationsCount vfContainerId={post.data.vfContainerId} />
-              )
-            }
+            {post.data.vfConversations && <VfConversationsCount vfContainerId={post.data.vfContainerId} />}
           </div>
         </div>
         <Image
@@ -94,8 +90,8 @@ const { Content } = await post.render();
       </article>
       {
         post.data.vfConversations && (
-          <div class="viafoura" id="vf-conversations-container" style="min-height: 800px">
-            <vf-conversations initial-height="800" />
+          <div id="vf-conversations-container" class="viafoura scroll-mt-20" style={`min-height: ${650 + 273}px`}>
+            <vf-conversations initial-height="650" />
           </div>
         )
       }
@@ -110,7 +106,7 @@ const { Content } = await post.render();
   observeVfHideSkeleton(".vf-topic-follow-button");
 </script>
 
-<style is:global>
+<style>
   .prose h2 {
     margin-top: 1.5rem !important;
     margin-bottom: 0.8rem !important;
