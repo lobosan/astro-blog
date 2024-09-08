@@ -1,16 +1,17 @@
 import eslint from "@eslint/js";
-import typescriptParser from "@typescript-eslint/parser";
+import typescriptEslintParser from "@typescript-eslint/parser";
 import astroEslintParser from "astro-eslint-parser";
 import eslintPluginAstro from "eslint-plugin-astro";
-import importPlugin from "eslint-plugin-import";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
-import tseslint from "typescript-eslint";
+import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
+import typescriptEslint from "typescript-eslint";
 
 export default [
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...typescriptEslint.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
   {
+    files: ["**/*.{js,ts,astro}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -19,29 +20,15 @@ export default [
         es2022: true,
         browser: true,
       },
-    },
-  },
-  {
-    files: ["*.astro"],
-    languageOptions: {
-      parser: astroEslintParser,
+      parser: typescriptEslintParser,
       parserOptions: {
-        parser: typescriptParser,
+        project: "./tsconfig.json",
         extraFileExtensions: [".astro"],
       },
     },
-  },
-  {
-    files: ["**/*.astro/*.js", "*.astro/*.js"],
-    languageOptions: {
-      parser: typescriptParser,
-    },
-  },
-  {
-    files: ["**/*.{js,ts,astro}"],
     plugins: {
-      "simple-import-sort": simpleImportSort,
-      import: importPlugin,
+      "simple-import-sort": eslintPluginSimpleImportSort,
+      import: eslintPluginImport,
     },
     rules: {
       "simple-import-sort/imports": "error",
@@ -49,6 +36,26 @@ export default [
       "import/first": "error",
       "import/no-duplicates": "error",
       "import/newline-after-import": "error",
+    },
+  },
+  {
+    files: ["**/*.astro"],
+    languageOptions: {
+      parser: astroEslintParser,
+      parserOptions: {
+        parser: typescriptEslintParser,
+        project: "./tsconfig.json",
+        extraFileExtensions: [".astro"],
+      },
+    },
+    rules: {
+      "@typescript-eslint/no-unsafe-assignment": "error",
+    },
+  },
+  {
+    files: ["**/*.astro/*.js", "*.astro/*.js"],
+    languageOptions: {
+      parser: typescriptEslintParser,
     },
   },
   {

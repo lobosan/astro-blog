@@ -3,6 +3,7 @@
   "compilerOptions": {
     "verbatimModuleSyntax": true,
     "strictNullChecks": true,
+    "noImplicitAny": true,
     "allowJs": true,
     "baseUrl": ".",
     "paths": {

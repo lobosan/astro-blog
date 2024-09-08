@@ -1,7 +1,12 @@
 ---
 import SkeletonLoader from "@/components/SkeletonLoader.astro";
 
-const { topics } = Astro.props;
+interface Topic {
+  id: number;
+  name: string;
+}
+
+const { topics } = Astro.props as { topics: Topic[] };
 ---
 
 <div class="mb-10 mt-6 border-b border-t border-stone-200 py-5 dark:border-neutral-600">
