@@ -10,7 +10,7 @@ const { vfContainerId, slug } = Astro.props;
 const link = slug ? `/posts/${slug}` : "";
 ---
 
-<div class="ml-[15px] flex border-l border-b-neutral-300 pl-3 font-semibold text-gray-800 dark:border-neutral-600">
+<div class="ml-[14px] flex border-l border-b-neutral-300 pl-[13px] font-semibold text-gray-800 dark:border-neutral-600">
   <a class="flex hover:underline" href={`${link}#vf-conversations-container`} title="Join the Conversation">
     <svg viewBox="0 0 24 24" fill="currentColor" class="mr-1 mt-[2px] h-5 w-5 text-gray-500 dark:text-white">
       <path d="M7 7h10v2H7zm0 4h7v2H7z"></path>
