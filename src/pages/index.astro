@@ -8,7 +8,9 @@ import MainLayout from "@/layouts/MainLayout.astro";
 const posts = await getCollection("posts");
 const heroSlug = "how-media-companies-handle-covid-19-information-overload";
 const postHero = posts.find(post => post.slug === heroSlug);
-const postList = posts.filter(post => post.slug !== heroSlug);
+const postList = posts
+  .filter(post => post.slug !== heroSlug)
+  .sort((a, b) => (b.data.vfConversations ? 1 : 0) - (a.data.vfConversations ? 1 : 0));
 ---
 
 <MainLayout title="Viafoura Demo">
